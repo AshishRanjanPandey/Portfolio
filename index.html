@@ -1,0 +1,2880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashish Ranjan Pandey — Web Developer & UI/UX Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Custom Interactive Magnetic Cursor -->
+    <div id="cursor-dot" class="cursor-dot"></div>
+    <div id="cursor-follower" class="cursor-follower">
+      <span class="cursor-label"></span>
+    </div>
+
+    <!-- Background Frame Animation Canvas (Fixed throughout entire scroll) -->
+    <div id="canvas-container">
+      <canvas id="animation-canvas"></canvas>
+      <div class="canvas-vignette"></div>
+      <div class="canvas-ambient-mesh"></div>
+    </div>
+
+    <!-- Ambient studio glows -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-top-right"></div>
+    <div class="ambient-glow glow-center-orange"></div>
+
+    <!-- Main Content Layer -->
+    <div id="content-container">
+      <!-- Fixed Navigation Bar -->
+      <header class="header">
+        <div class="header-inner">
+          <a href="#" class="logo" data-cursor="hover">ASHISH.DEV</a>
+
+          <nav class="nav-pill">
+            <a href="#hero" class="nav-link active" data-cursor="hover">Home</a>
+            <a href="#about" class="nav-link" data-cursor="hover">About</a>
+            <a href="#skills" class="nav-link" data-cursor="hover">Skills</a>
+            <a href="#certifications" class="nav-link" data-cursor="hover">Certifications</a>
+            <a href="#projects" class="nav-link" data-cursor="hover">Project</a>
+            <a href="#contact" class="nav-link" data-cursor="hover">Contact</a>
+          </nav>
+
+          <a href="#contact" class="btn-primary btn-cta" data-cursor="hover">
+            <span>Start a Project</span>
+            <span class="btn-arrow-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <!-- Giant Typographic Hero Title: Ashish Pandey (matching ptf1.jpg) -->
+        <div class="hero-title-container">
+          <div class="hero-title-wrap">
+            <span class="hero-greeting">Hi, I am</span>
+            <h1 class="hero-name">
+              <span class="name-part name-left">Ashish</span>
+              <span class="name-part name-right">Pandey</span>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Hero Bottom Grid (Widgets overlaying the bottom of the video) -->
+        <div class="hero-widgets">
+          <!-- Left Widget: Google Student Ambassador Card -->
+          <div class="hero-left-widget glass-card-interactive google-ambassador-card" data-tilt>
+            <div class="google-ambassador-badge">
+              <div class="google-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+              </div>
+              <span class="ambassador-badge-text">Google Student Ambassador</span>
+              <span class="ambassador-verified-check" title="Verified Ambassador">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#34A853">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </span>
+            </div>
+            <h2 class="hero-headline ambassador-headline">
+              Driving Tech Innovation & Campus Developer Communities
+            </h2>
+            <p class="ambassador-desc">
+              Empowering students through Google technologies, AI & Cloud workshops, hackathons, and technical mentorship.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary" data-cursor="hover">
+                <span>View Initiatives</span>
+                <span class="btn-arrow-circle">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
+              <a href="#about" class="btn-secondary" data-cursor="hover">
+                <span>About Role</span>
+                <span class="btn-arrow-down">↘</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Widget: 2x Google Cloud Arcade Legend Card -->
+          <div class="hero-right-widget">
+            <div class="arcade-legend-card glass-card-interactive" data-tilt>
+              <!-- Top Row: Google Cloud Logo + 2x Legend Tier Pill -->
+              <div class="arcade-top-row">
+                <div class="arcade-brand-badge">
+                  <!-- Google Cloud Official Logo SVG -->
+                  <svg class="gcloud-logo-svg" width="22" height="18" viewBox="0 0 24 19.5" fill="none">
+                    <path d="M19.35 8.04C18.67 3.59 14.82 0.2 10.15 0.2C6.46 0.2 3.27 2.45 1.83 5.7C0.74 6.78 0.08 8.27 0.08 9.93C0.08 13.38 2.87 16.18 6.32 16.18H19.08C21.73 16.18 23.88 14.03 23.88 11.38C23.88 8.85 21.9 6.78 19.35 8.04Z" fill="#4285F4"/>
+                    <path d="M19.35 8.04L15.5 11.5L12 8L15.5 4.5L19.35 8.04Z" fill="#EA4335" opacity="0.8"/>
+                    <path d="M10.15 0.2C14.82 0.2 18.67 3.59 19.35 8.04L15.5 11.5L10.15 6.2V0.2Z" fill="#FBBC05" opacity="0.8"/>
+                    <path d="M6.32 16.18C2.87 16.18 0.08 13.38 0.08 9.93C0.08 8.27 0.74 6.78 1.83 5.7L6.32 10.2V16.18Z" fill="#34A853" opacity="0.8"/>
+                  </svg>
+                  <span class="arcade-brand-text">Google Cloud</span>
+                </div>
+                
+                <!-- 2x Legend Tier Pill -->
+                <div class="arcade-tier-badge">
+                  <span class="trophy-sparkle">🏆</span>
+                  <span class="tier-text">2x Legend</span>
+                </div>
+              </div>
+
+              <!-- Main Title & Subtitle -->
+              <div class="arcade-content">
+                <h3 class="arcade-title">Arcade Legend</h3>
+                <p class="arcade-subtitle">
+                  Highest Rank Tier Achieved Twice across Google Cloud Arcade Seasons
+                </p>
+              </div>
+
+              <!-- Badges / Tags -->
+              <div class="arcade-tags">
+                <span class="arcade-tag tag-gold">Top Tier Rank</span>
+                <span class="arcade-tag">Cloud & AI</span>
+                <span class="arcade-tag">DevOps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Infinite Marquee Ticker -->
+      <section class="marquee-section">
+        <div class="marquee-track">
+          <div class="marquee-content">
+            <span class="marquee-item">GOOGLE STUDENT AMBASSADOR</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">LEETCODE KNIGHT (1850+)</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">AI INTERN @ IBM &amp; SERVICENOW</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">2X CLOUD ARCADE LEGEND</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">GOOGLE STUDENT AMBASSADOR</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">LEETCODE KNIGHT (1850+)</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">AI INTERN @ IBM &amp; SERVICENOW</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">2X CLOUD ARCADE LEGEND</span>
+            <span class="marquee-star">✦</span>
+          </div>
+          <!-- Cloned for seamless loop -->
+          <div class="marquee-content" aria-hidden="true">
+            <span class="marquee-item">GOOGLE STUDENT AMBASSADOR</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">LEETCODE KNIGHT (1850+)</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">AI INTERN @ IBM &amp; SERVICENOW</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">2X CLOUD ARCADE LEGEND</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">GOOGLE STUDENT AMBASSADOR</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">LEETCODE KNIGHT (1850+)</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">AI INTERN @ IBM &amp; SERVICENOW</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">2X CLOUD ARCADE LEGEND</span>
+            <span class="marquee-star">✦</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section (Interactive Glass & Scroll Reveal) -->
+      <section class="about-section" id="about">
+        <div class="about-container">
+          <div class="about-sidebar">
+            <div class="tag-pill">
+              <span class="tag-dot"></span>
+              <span>About Me</span>
+            </div>
+            <div class="about-line"></div>
+            
+            <!-- Quick Live Stats -->
+            <div class="about-quick-stats">
+              <div class="stat-box">
+                <span class="stat-number" data-count="1850">1850</span><span class="stat-plus">+</span>
+                <span class="stat-label">LeetCode (Knight Tier)</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number" data-count="2">2</span><span class="stat-plus">x</span>
+                <span class="stat-label">Google Arcade Legend</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number" data-count="2">2</span><span class="stat-plus">+</span>
+                <span class="stat-label">AI Internships (IBM • ServiceNow)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <!-- Scroll-revealing dynamic editorial statement -->
+            <div class="about-statement" id="about-statement-text">
+              <p class="about-lead">
+                I’m a <strong class="glow-text">B.Tech Computer Science</strong> student at <strong class="glow-institution">VIT Bhopal</strong> who loves building intelligent, <strong class="glow-tech">cloud-native software</strong>. I’ve worked as an AI intern at <strong class="glow-ibm">IBM</strong> and <strong class="glow-snow">ServiceNow</strong>, compete on <strong class="glow-gold">LeetCode (Knight, 1850+)</strong>, and represent Google as a <strong class="glow-google">Student Ambassador</strong>.
+              </p>
+              <p class="about-offscreen">
+                Off screen, I play football and volleyball, host events as a Master of Ceremony, and serve as a Youth Ambassador with Veterans India.
+              </p>
+            </div>
+
+            <!-- Interactive Skills / Tech Stack Grid -->
+            <div class="skills-wrap">
+              <div class="skills-category">
+                <span class="skills-title">Technical Expertise & Core Domains:</span>
+                <div class="skills-tags">
+                  <span class="skill-tag tag-ai" data-cursor="hover">🧠 Intelligent AI Systems</span>
+                  <span class="skill-tag tag-cloud" data-cursor="hover">☁️ Cloud-Native Engineering</span>
+                  <span class="skill-tag tag-lc" data-cursor="hover">🏆 LeetCode Knight (1850+)</span>
+                  <span class="skill-tag tag-google" data-cursor="hover">🌐 Google Student Ambassador</span>
+                  <span class="skill-tag tag-intern" data-cursor="hover">💼 Ex-AI Intern @ IBM</span>
+                  <span class="skill-tag tag-intern" data-cursor="hover">💼 Ex-AI Intern @ ServiceNow</span>
+                  <span class="skill-tag" data-cursor="hover">⚡ Full-Stack Engineering</span>
+                  <span class="skill-tag" data-cursor="hover">🚀 Modern Web Platforms</span>
+                </div>
+              </div>
+
+              <div class="skills-category offscreen-group">
+                <span class="skills-title">Leadership & Beyond Code:</span>
+                <div class="skills-tags">
+                  <span class="skill-tag tag-leader" data-cursor="hover">🎤 Master of Ceremony / Host</span>
+                  <span class="skill-tag tag-ambassador" data-cursor="hover">🇮🇳 Youth Ambassador @ Veterans India</span>
+                  <span class="skill-tag tag-sports" data-cursor="hover">⚽ Football</span>
+                  <span class="skill-tag tag-sports" data-cursor="hover">🏐 Volleyball</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#skills" class="btn-primary" data-cursor="hover">
+                <span>Explore Skills</span>
+                <span class="btn-arrow-circle">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
+              <a href="#projects" class="btn-secondary" data-cursor="hover">
+                <span>View Projects</span>
+                <span class="btn-arrow-down">↘</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section (3D Rotary Arc Wheel & Motion Graphic Dial) -->
+      <section class="skills-section" id="skills">
+        <!-- Motion Graphics Kinetic Crosshair Frame (inspired by reference video) -->
+        <div class="skills-frame-decor">
+          <span class="decor-corner decor-tl">+</span>
+          <span class="decor-corner decor-tr">+</span>
+          <span class="decor-meta-left">ASHISH PANDEY // B.TECH CSE</span>
+          <span class="decor-meta-right">CORE ARSENAL // 2026</span>
+        </div>
+
+        <div class="skills-header-row">
+          <div class="skills-header">
+            <div class="tag-pill">
+              <span class="tag-dot"></span>
+              <span>Technical Arsenal</span>
+            </div>
+            <!-- Kinetic Motion Typography (layered outline ghost + bold display fill) -->
+            <div class="kinetic-title-wrap">
+              <span class="kinetic-title-ghost" aria-hidden="true">SKILLS</span>
+              <h2 class="section-title kinetic-title-main">SKILLS &amp; ARSENAL</h2>
+            </div>
+            <p class="section-subtitle">
+              Interactive 3D rotary showcase of algorithmic mastery, enterprise systems, intelligent cloud engineering, and community leadership.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3D Card Wheel Carousel Container -->
+        <div class="skills-carousel-wrapper" id="skills-carousel">
+          <!-- Motion Graphic Navigation Arrows -->
+          <button class="carousel-arrow arrow-prev" id="skills-prev" aria-label="Previous Skill" data-cursor="hover">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          
+          <button class="carousel-arrow arrow-next" id="skills-next" aria-label="Next Skill" data-cursor="hover">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- 3D Cards Stage -->
+          <div class="skills-stage" id="skills-stage">
+            <!-- Card 1: DSA & LeetCode -->
+            <div class="skills-card glass-card-interactive card-lc" data-index="0" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-lc">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-lc">Knight • 1850+</span>
+              </div>
+              <h3 class="skill-card-title">DSA &amp; LeetCode</h3>
+              <p class="skill-card-desc">
+                Knight on LeetCode with an <strong>1850+ contest rating</strong> (Top 5% globally). Advanced problem-solving in dynamic programming, graph theory, trees, and optimal asymptotic complexity.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">LeetCode (1850+)</span>
+                <span class="skill-pill">DSA</span>
+                <span class="skill-pill">Dynamic Programming</span>
+                <span class="skill-pill">Graphs &amp; Trees</span>
+                <span class="skill-pill">Competitive Coding</span>
+                <span class="skill-pill">Time-Space Complexity</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Java & Systems Architecture -->
+            <div class="skills-card glass-card-interactive card-java" data-index="1" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-java">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-java">Enterprise &amp; OOP</span>
+              </div>
+              <h3 class="skill-card-title">Java &amp; OOP Architecture</h3>
+              <p class="skill-card-desc">
+                Robust software engineering in <strong>Java</strong>. Deep mastery of object-oriented design principles, multithreaded concurrency, collections framework, and enterprise design patterns.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">OOP Design</span>
+                <span class="skill-pill">Multithreading</span>
+                <span class="skill-pill">Collections Framework</span>
+                <span class="skill-pill">Design Patterns</span>
+                <span class="skill-pill">JVM Internals</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Python & Applied Intelligence -->
+            <div class="skills-card glass-card-interactive card-python" data-index="2" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-python">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a5 5 0 0 0-5 5v3h6V7a2 2 0 0 0-2-2H8"></path>
+                    <path d="M12 22a5 5 0 0 0 5-5v-3h-6v3a2 2 0 0 0 2 2h3"></path>
+                    <circle cx="9" cy="6" r="1" fill="currentColor"></circle>
+                    <circle cx="15" cy="18" r="1" fill="currentColor"></circle>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-python">Full-Spectrum Python</span>
+              </div>
+              <h3 class="skill-card-title">Python &amp; Applied Intelligence</h3>
+              <p class="skill-card-desc">
+                High-velocity engineering in <strong>Python</strong> for automated AI pipelines, data manipulation, scientific computing, RESTful microservices, and rapid algorithm prototyping.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">FastAPI</span>
+                <span class="skill-pill">NumPy</span>
+                <span class="skill-pill">Pandas</span>
+                <span class="skill-pill">Automation</span>
+                <span class="skill-pill">AsyncIO</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Intelligent AI & Machine Learning -->
+            <div class="skills-card glass-card-interactive card-ai" data-index="3" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-ai">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 3.37 2.08 6.26 5 7.46V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.54c2.92-1.2 5-4.09 5-7.46a8 8 0 0 0-8-8z"/>
+                    <path d="M9 10h.01"/><path d="M15 10h.01"/>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-ai">IBM &amp; ServiceNow</span>
+              </div>
+              <h3 class="skill-card-title">Intelligent AI &amp; ML</h3>
+              <p class="skill-card-desc">
+                Enterprise experience gained as an AI Intern at <strong>IBM</strong> and <strong>ServiceNow</strong>. Building generative AI workflows, agentic systems, prompt optimization, and production ML pipelines.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">PyTorch</span>
+                <span class="skill-pill">TensorFlow</span>
+                <span class="skill-pill">LLMs &amp; Agents</span>
+                <span class="skill-pill">NLP</span>
+                <span class="skill-pill">Prompt Engineering</span>
+                <span class="skill-pill">Scikit-Learn</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Cloud Architecture & DevOps -->
+            <div class="skills-card glass-card-interactive card-cloud" data-index="4" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-cloud">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-cloud">2x Arcade Legend</span>
+              </div>
+              <h3 class="skill-card-title">Cloud Architecture &amp; DevOps</h3>
+              <p class="skill-card-desc">
+                Certified across Google Cloud Arcade seasons. Designing distributed systems, microservices containerization, automated CI/CD pipelines, and resilient cloud-native backends.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">Google Cloud (GCP)</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Kubernetes</span>
+                <span class="skill-pill">CI/CD Pipelines</span>
+                <span class="skill-pill">Microservices</span>
+                <span class="skill-pill">Linux</span>
+              </div>
+            </div>
+
+            <!-- Card 6: Modern Full-Stack & Creative Web -->
+            <div class="skills-card glass-card-interactive card-web" data-index="5" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-web">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-web">60–120 FPS UI</span>
+              </div>
+              <h3 class="skill-card-title">Full-Stack &amp; Creative Web</h3>
+              <p class="skill-card-desc">
+                Building fluid, hardware-accelerated interactive web applications with 60–120 FPS canvas animations, responsive Next.js/React component architecture, and full-stack APIs.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">React.js</span>
+                <span class="skill-pill">Next.js</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">HTML5 Canvas</span>
+                <span class="skill-pill">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <!-- Card 7: Core Computer Science & Systems -->
+            <div class="skills-card glass-card-interactive card-systems" data-index="6" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-systems">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-systems">VIT Bhopal CS</span>
+              </div>
+              <h3 class="skill-card-title">Core Systems Engineering</h3>
+              <p class="skill-card-desc">
+                Deep foundational Computer Science coursework at <strong>VIT Bhopal</strong>. Operating systems internals, relational database management (DBMS), networking protocols, and system design.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">Operating Systems</span>
+                <span class="skill-pill">DBMS &amp; SQL</span>
+                <span class="skill-pill">Computer Networks</span>
+                <span class="skill-pill">System Architecture</span>
+                <span class="skill-pill">Git &amp; GitHub</span>
+              </div>
+            </div>
+
+            <!-- Card 8: Leadership, Speaking & Community -->
+            <div class="skills-card glass-card-interactive card-lead" data-index="7" data-tilt>
+              <div class="skill-card-top">
+                <div class="skill-icon-box icon-lead">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                    <line x1="12" y1="19" x2="12" y2="23"/>
+                    <line x1="8" y1="23" x2="16" y2="23"/>
+                  </svg>
+                </div>
+                <span class="skill-badge badge-lead">Ambassador &amp; Host</span>
+              </div>
+              <h3 class="skill-card-title">Leadership &amp; Community</h3>
+              <p class="skill-card-desc">
+                <strong>Google Student Ambassador</strong> empowering campus developers; <strong>Master of Ceremony (Emcee)</strong> hosting flagship technical summits; and <strong>Youth Ambassador</strong> with Veterans India.
+              </p>
+              <div class="skill-card-tags">
+                <span class="skill-pill">Google Ambassador</span>
+                <span class="skill-pill">Master of Ceremony</span>
+                <span class="skill-pill">Veterans India</span>
+                <span class="skill-pill">Tech Mentorship</span>
+                <span class="skill-pill">Public Speaking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rotary Dial / Compass Ring Underneath (inspired by reference video) -->
+          <div class="skills-rotary-dial">
+            <div class="dial-pointer">
+              <span class="pointer-triangle">▲</span>
+              <span class="pointer-label" id="dial-active-label">DSA &amp; LEETCODE</span>
+            </div>
+            <div class="dial-outer-ring" id="dial-rotating-ring">
+              <svg viewBox="0 0 360 360" class="dial-svg">
+                <circle cx="180" cy="180" r="165" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="4 6"/>
+                <circle cx="180" cy="180" r="140" fill="none" stroke="rgba(255,94,43,0.35)" stroke-width="1"/>
+                <path d="M 180,8 L 180,22 M 352,180 L 338,180 M 180,352 L 180,338 M 8,180 L 22,180" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+                <path id="dial-text-path" d="M 180,180 m -120,0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0" fill="none"/>
+                <text class="dial-curved-text">
+                  <textPath href="#dial-text-path" startOffset="0%">
+                    ✦ DSA &amp; LEETCODE ✦ JAVA ✦ PYTHON ✦ AI &amp; ML ✦ CLOUD NATIVE ✦ FULL STACK ✦ SYSTEMS ✦ LEADERSHIP ✦
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Pagination Indicator Dots -->
+          <div class="skills-dots" id="skills-dots"></div>
+        </div>
+      </section>
+
+      <!-- Programmes & Global Tech Ecosystems Section (3D CoverFlow Carousel) -->
+      <section class="programmes-section" id="programmes">
+        <div class="programmes-header">
+          <div class="tag-pill">
+            <span class="tag-dot"></span>
+            <span>Programmes &amp; Ecosystems</span>
+          </div>
+          <h2 class="section-title">GLOBAL PROGRAMMES &amp; COLLABORATIONS</h2>
+          <p class="section-subtitle">
+            Major tech company initiatives, enterprise AI internships, and global developer communities I actively participate in.
+          </p>
+        </div>
+
+        <div class="coverflow-carousel" id="programmes-coverflow">
+          <!-- Navigation Arrows -->
+          <button class="coverflow-arrow arrow-prev" id="prog-prev" aria-label="Previous Programme" data-cursor="hover">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          
+          <button class="coverflow-arrow arrow-next" id="prog-next" aria-label="Next Programme" data-cursor="hover">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- 3D CoverFlow Stage -->
+          <div class="coverflow-stage" id="prog-stage">
+            <!-- Card 1: Google Student Ambassador -->
+            <div class="coverflow-card card-light-luxury" data-index="0">
+              <div class="card-banner banner-google">
+                <span class="banner-badge">Google Ecosystem</span>
+                <div class="banner-center-icon">
+                  <!-- Real Google 4-Color Logo -->
+                  <svg width="42" height="42" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                  </svg>
+                </div>
+                <span class="banner-watermark">GOOGLE</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-top">
+                  <div class="card-title-group">
+                    <h3 class="card-company-title">Google</h3>
+                  </div>
+                  <span class="card-role-pill pill-google">Ambassador</span>
+                </div>
+                <p class="card-location">📍 Campus Developer Community • VIT Bhopal</p>
+                <p class="card-desc">
+                  Driving campus developer innovation, conducting hands-on Google AI &amp; Cloud workshops, and mentoring 500+ student developers across central India.
+                </p>
+                <div class="card-stats-grid">
+                  <div class="stat-col">
+                    <span class="stat-col-val val-blue">500+</span>
+                    <span class="stat-col-label">Mentored</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-green">12+</span>
+                    <span class="stat-col-label">Workshops</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-orange">4.9 ★</span>
+                    <span class="stat-col-label">Rating</span>
+                  </div>
+                </div>
+                <div class="card-footer-row">
+                  <div class="card-status-badge status-verified">
+                    <span class="status-dot dot-green"></span>
+                    <span>Student Ambassador</span>
+                  </div>
+                  <a href="#about" class="card-circle-btn" aria-label="View Google Ambassador Details" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: IBM AI Internship -->
+            <div class="coverflow-card card-light-luxury" data-index="1">
+              <div class="card-banner banner-ibm">
+                <span class="banner-badge">Enterprise AI</span>
+                <div class="banner-center-icon icon-ibm">
+                  <!-- User Provided IBM Official Logo -->
+                  <img src="/assets/logos/ibm-logo.webp" alt="IBM Official Logo" class="banner-brand-img img-ibm" />
+                </div>
+                <span class="banner-watermark">IBM</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-top">
+                  <div class="card-title-group">
+                    <h3 class="card-company-title">IBM</h3>
+                  </div>
+                  <span class="card-role-pill pill-ibm">AI Intern</span>
+                </div>
+                <p class="card-location">📍 Enterprise AI &amp; Cloud Systems • Remote</p>
+                <p class="card-desc">
+                  Engineered predictive machine learning pipelines, deep learning models, and automated data processing solutions deployed on IBM Cloud infrastructure.
+                </p>
+                <div class="card-stats-grid">
+                  <div class="stat-col">
+                    <span class="stat-col-val val-blue">PyTorch</span>
+                    <span class="stat-col-label">Framework</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-cyan">Enterprise</span>
+                    <span class="stat-col-label">Scale</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-orange">Top 1%</span>
+                    <span class="stat-col-label">Impact</span>
+                  </div>
+                </div>
+                <div class="card-footer-row">
+                  <div class="card-status-badge status-verified">
+                    <span class="status-dot dot-blue"></span>
+                    <span>AI Engineering</span>
+                  </div>
+                  <a href="#about" class="card-circle-btn" aria-label="View IBM AI Internship Details" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: ServiceNow AI Internship -->
+            <div class="coverflow-card card-light-luxury" data-index="2">
+              <div class="card-banner banner-snow">
+                <span class="banner-badge">Agentic AI</span>
+                <div class="banner-center-icon icon-servicenow">
+                  <!-- User Provided ServiceNow Official Logo -->
+                  <img src="/assets/logos/servicenow-logo.jpg" alt="ServiceNow Official Logo" class="banner-brand-img img-servicenow" />
+                </div>
+                <span class="banner-watermark">SERVICENOW</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-top">
+                  <div class="card-title-group">
+                    <h3 class="card-company-title">ServiceNow</h3>
+                  </div>
+                  <span class="card-role-pill pill-snow">AI Intern</span>
+                </div>
+                <p class="card-location">📍 Intelligent Enterprise Automation • Platform</p>
+                <p class="card-desc">
+                  Designed agentic AI workflows, LLM orchestration, and automated enterprise service management systems for mission-critical client operations.
+                </p>
+                <div class="card-stats-grid">
+                  <div class="stat-col">
+                    <span class="stat-col-val val-green">LLMs</span>
+                    <span class="stat-col-label">Agents</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-cyan">Platform</span>
+                    <span class="stat-col-label">Architecture</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-orange">Production</span>
+                    <span class="stat-col-label">Release</span>
+                  </div>
+                </div>
+                <div class="card-footer-row">
+                  <div class="card-status-badge status-verified">
+                    <span class="status-dot dot-green"></span>
+                    <span>Intelligent Systems</span>
+                  </div>
+                  <a href="#about" class="card-circle-btn" aria-label="View ServiceNow AI Internship Details" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Google Cloud 2x Arcade Legend -->
+            <div class="coverflow-card card-light-luxury" data-index="3">
+              <div class="card-banner banner-gcloud">
+                <span class="banner-badge">Cloud Credential</span>
+                <div class="banner-center-icon">
+                  <!-- Real Official Google Cloud Logo -->
+                  <svg width="52" height="42" viewBox="0 -25 256 256">
+                    <path fill="#EA4335" d="m170.252 56.819 22.253-22.253 1.483-9.37C153.437-11.677 88.976-7.496 52.42 33.92 42.267 45.423 34.734 59.764 30.717 74.573l7.97-1.123 44.505-7.34 3.436-3.513c19.797-21.742 53.27-24.667 76.128-6.168l7.496.39Z"/>
+                    <path fill="#4285F4" d="M224.205 73.918a100.249 100.249 0 0 0-30.217-48.722l-31.232 31.232a55.515 55.515 0 0 1 20.379 44.037v5.544c15.35 0 27.797 12.445 27.797 27.796 0 15.352-12.446 27.485-27.797 27.485h-55.671l-5.466 5.934v33.34l5.466 5.231h55.67c39.93.311 72.553-31.494 72.864-71.424a72.303 72.303 0 0 0-31.793-60.453"/>
+                    <path fill="#34A853" d="M71.87 205.796h55.593V161.29H71.87a27.275 27.275 0 0 1-11.399-2.498l-7.887 2.42-22.409 22.253-1.952 7.574c12.567 9.489 27.9 14.825 43.647 14.757"/>
+                    <path fill="#FBBC05" d="M71.87 61.425C31.94 61.664-.237 94.228.001 134.159a72.301 72.301 0 0 0 28.222 56.88l32.248-32.246c-13.99-6.322-20.208-22.786-13.887-36.776 6.32-13.99 22.786-20.208 36.775-13.888a27.796 27.796 0 0 1 13.887 13.888l32.248-32.248A72.224 72.224 0 0 0 71.87 61.425"/>
+                  </svg>
+                </div>
+                <span class="banner-watermark">GCLOUD</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-top">
+                  <div class="card-title-group">
+                    <h3 class="card-company-title">Google Cloud</h3>
+                  </div>
+                  <span class="card-role-pill pill-gold">🏆 2x Legend</span>
+                </div>
+                <p class="card-location">📍 Google Cloud Arcade • Global Leaderboard</p>
+                <p class="card-desc">
+                  Achieved the highest Legend tier twice across consecutive seasons: Kubernetes, infrastructure architecture, serverless DevOps, and Cloud security.
+                </p>
+                <div class="card-stats-grid">
+                  <div class="stat-col">
+                    <span class="stat-col-val val-gold">2x</span>
+                    <span class="stat-col-label">Seasons</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-blue">Legend</span>
+                    <span class="stat-col-label">Tier Rank</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-green">DevOps</span>
+                    <span class="stat-col-label">Skill</span>
+                  </div>
+                </div>
+                <div class="card-footer-row">
+                  <div class="card-status-badge status-verified">
+                    <span class="status-dot dot-gold"></span>
+                    <span>Arcade Legend</span>
+                  </div>
+                  <a href="#about" class="card-circle-btn" aria-label="View Google Cloud Legend Details" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: LeetCode Knight -->
+            <div class="coverflow-card card-light-luxury" data-index="4">
+              <div class="card-banner banner-leetcode">
+                <span class="banner-badge">Competitive DSA</span>
+                <div class="banner-center-icon icon-leetcode">
+                  <!-- User Provided LeetCode Official Logo -->
+                  <img src="/assets/logos/leetcode-logo.jpg" alt="LeetCode Official Logo" class="banner-brand-img img-leetcode" />
+                </div>
+                <span class="banner-watermark">LEETCODE</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-top">
+                  <div class="card-title-group">
+                    <h3 class="card-company-title">LeetCode</h3>
+                  </div>
+                  <span class="card-role-pill pill-gold">Knight Tier</span>
+                </div>
+                <p class="card-location">📍 Global Algorithmic Contests • 1850+</p>
+                <p class="card-desc">
+                  Ranked in the top 5% worldwide with a peak contest rating of 1850+. Master of dynamic programming, graph algorithms, and time-space optimization.
+                </p>
+                <div class="card-stats-grid">
+                  <div class="stat-col">
+                    <span class="stat-col-val val-gold">1850+</span>
+                    <span class="stat-col-label">Rating</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-orange">Knight</span>
+                    <span class="stat-col-label">Rank</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-blue">Top 5%</span>
+                    <span class="stat-col-label">Worldwide</span>
+                  </div>
+                </div>
+                <div class="card-footer-row">
+                  <div class="card-status-badge status-verified">
+                    <span class="status-dot dot-gold"></span>
+                    <span>Competitive Coder</span>
+                  </div>
+                  <a href="#about" class="card-circle-btn" aria-label="View LeetCode Profile Details" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6: Hacktoberfest Open Source -->
+            <div class="coverflow-card card-light-luxury" data-index="5">
+              <div class="card-banner banner-hacktoberfest">
+                <span class="banner-badge">Open Source</span>
+                <div class="banner-center-icon icon-hacktoberfest">
+                  <!-- User Provided Hacktoberfest Official Logo -->
+                  <img src="/assets/logos/hacktoberfest-logo.png" alt="Hacktoberfest Official Logo" class="banner-brand-img img-hacktoberfest" />
+                </div>
+                <span class="banner-watermark">HACKTOBER</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-top">
+                  <div class="card-title-group">
+                    <h3 class="card-company-title">Hacktoberfest</h3>
+                  </div>
+                  <span class="card-role-pill pill-orange">Contributor</span>
+                </div>
+                <p class="card-location">📍 DigitalOcean &amp; Global OSS Community</p>
+                <p class="card-desc">
+                  Active global contributor with merged pull requests across community tooling, open developer libraries, and ecosystem utilities.
+                </p>
+                <div class="card-stats-grid">
+                  <div class="stat-col">
+                    <span class="stat-col-val val-orange">4+</span>
+                    <span class="stat-col-label">PRs Merged</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-cyan">Global</span>
+                    <span class="stat-col-label">Ecosystem</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-green">Badge</span>
+                    <span class="stat-col-label">Certified</span>
+                  </div>
+                </div>
+                <div class="card-footer-row">
+                  <div class="card-status-badge status-verified">
+                    <span class="status-dot dot-orange"></span>
+                    <span>OSS Contributor</span>
+                  </div>
+                  <a href="https://github.com" target="_blank" rel="noopener" class="card-circle-btn" aria-label="View Hacktoberfest Contributions" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 7: GitHub Campus & Open Source -->
+            <div class="coverflow-card card-light-luxury" data-index="6">
+              <div class="card-banner banner-github">
+                <span class="banner-badge">Developer Network</span>
+                <div class="banner-center-icon">
+                  <!-- Real Official GitHub Logo -->
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="#24292e">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </div>
+                <span class="banner-watermark">GITHUB</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta-top">
+                  <div class="card-title-group">
+                    <h3 class="card-company-title">GitHub</h3>
+                  </div>
+                  <span class="card-role-pill pill-purple">Campus &amp; OSS</span>
+                </div>
+                <p class="card-location">📍 Global Developer Community &amp; Git</p>
+                <p class="card-desc">
+                  Building and sharing open-source repositories, setting up GitHub Actions automated CI/CD pipelines, and contributing code to the global community.
+                </p>
+                <div class="card-stats-grid">
+                  <div class="stat-col">
+                    <span class="stat-col-val val-blue">100+</span>
+                    <span class="stat-col-label">Commits</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-cyan">CI/CD</span>
+                    <span class="stat-col-label">Actions</span>
+                  </div>
+                  <div class="stat-col">
+                    <span class="stat-col-val val-green">Public</span>
+                    <span class="stat-col-label">Repos</span>
+                  </div>
+                </div>
+                <div class="card-footer-row">
+                  <div class="card-status-badge status-verified">
+                    <span class="status-dot dot-blue"></span>
+                    <span>Open Source</span>
+                  </div>
+                  <a href="https://github.com/AshishRanjanPandey" target="_blank" rel="noopener" class="card-circle-btn" aria-label="View GitHub Profile Details" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CoverFlow Pagination Dots -->
+          <div class="coverflow-dots" id="prog-dots"></div>
+        </div>
+      </section>
+
+      <!-- Certifications & Verified Credentials Section (3D Motion Waterfall & Grid) -->
+      <section class="certifications-section" id="certifications">
+        <div class="certifications-container">
+          <div class="certifications-header">
+            <div class="tag-pill">
+              <span class="tag-dot"></span>
+              <span>Verified Credentials &amp; Honors</span>
+            </div>
+            <h2 class="section-title">OFFICIAL CERTIFICATIONS &amp; HONORS</h2>
+            <p class="section-subtitle">
+              Authentic credentials spanning top 1% national rank at IIT Kharagpur, enterprise Generative AI with Google Cloud, graph architectures with Neo4j, and competitive algorithmic recognition.
+            </p>
+
+            <!-- Interactive View & Playback Controls Bar -->
+            <div class="cert-controls-bar">
+              <div class="cert-view-tabs">
+                <button type="button" class="cert-tab-btn active" id="tab-waterfall" data-cursor="hover">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                  <span>3D Cascading Waterfall</span>
+                </button>
+                <button type="button" class="cert-tab-btn" id="tab-grid" data-cursor="hover">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  <span>Grid View</span>
+                </button>
+              </div>
+
+              <div class="cert-playback-actions">
+                <button type="button" class="cert-pill-btn" id="cert-toggle-play" title="Pause or Resume Flow" data-cursor="hover">
+                  <span class="cert-btn-icon" id="cert-play-icon">❚❚</span>
+                  <span id="cert-play-text">Pause</span>
+                </button>
+                <button type="button" class="cert-pill-btn" id="cert-toggle-dir" title="Reverse Flow Direction" data-cursor="hover">
+                  <span class="cert-btn-icon">⇅</span>
+                  <span>Reverse</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1. 3D Cascading Waterfall Stage (Animated Diagonal Cascade as in Reference Video) -->
+          <div class="cert-waterfall-stage" id="cert-waterfall-view">
+            <div class="cert-waterfall-track-wrapper">
+              <div class="cert-waterfall-track" id="cert-waterfall-track">
+                <!-- SET 1: 9 Authentic Credentials -->
+                <!-- Slide 01: Marketing Analytics IIT Kharagpur -->
+                <div class="cert-slide-card slide-theme-gold" data-cert-src="/assets/certificates/certi9.jpg" data-cert-title="Marketing Analytics &mdash; Elite + Topper Top 1% (100% Score)" data-cert-issuer="NPTEL &bull; IIT Kharagpur (Govt. of India)" data-cert-id="NPTEL26MG33S952401760" data-cert-badge="Top 1% Topper &bull; 100%" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">01</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">NPTEL &bull; IIT KHARAGPUR</span>
+                    </div>
+                    <div class="slide-pill pill-gold">
+                      <span class="status-pulse-dot dot-gold"></span>
+                      <span>Top 1% Topper &bull; 100%</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/certi9.jpg" alt="Marketing Analytics IIT Kharagpur" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Marketing Analytics</h3>
+                      <p class="slide-desc">Elite Distinction + National Top 1% Topper. Statistical modeling, CLV regressions, and pricing models.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">100%</span><span class="slide-stat-lbl">Aggregate</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">25/25</span><span class="slide-stat-lbl">Assignments</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">75/75</span><span class="slide-stat-lbl">Exam Score</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">NPTEL26MG33S952401760</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 02: Google Cloud Gen AI Academy -->
+                <div class="cert-slide-card slide-theme-gcloud" data-cert-src="/assets/certificates/cert_google_genai_rendered.png" data-cert-title="Google Cloud Gen AI Academy Specialist" data-cert-issuer="Google Cloud &times; Hack2Skill" data-cert-id="2025H2S04GENAI-A600254" data-cert-badge="Gen AI Academy" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">02</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">GOOGLE CLOUD &times; HACK2SKILL</span>
+                    </div>
+                    <div class="slide-pill pill-blue">
+                      <span class="status-pulse-dot dot-blue"></span>
+                      <span>Gen AI Academy</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/cert_google_genai_rendered.png" alt="Google Cloud Gen AI Academy" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Gen AI Academy Specialist</h3>
+                      <p class="slide-desc">Vertex AI, Gemini APIs, multimodal prompt design, Imagen 3, LangChain, and enterprise production RAG.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">Vertex AI</span><span class="slide-stat-lbl">Platform</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Gemini</span><span class="slide-stat-lbl">Multimodal</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">RAG</span><span class="slide-stat-lbl">Architecture</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">2025H2S04GENAI-A600254</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 03: Cloud Computing IIT Kharagpur -->
+                <div class="cert-slide-card slide-theme-cyan" data-cert-src="/assets/certificates/certi10.jpg" data-cert-title="Cloud Computing &mdash; Elite Distinction" data-cert-issuer="NPTEL &bull; IIT Kharagpur (Govt. of India)" data-cert-id="NPTEL25CS11S1044100191" data-cert-badge="Elite Distinction &bull; 75%" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">03</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">NPTEL &bull; IIT KHARAGPUR</span>
+                    </div>
+                    <div class="slide-pill pill-cyan">
+                      <span class="status-pulse-dot dot-cyan"></span>
+                      <span>Elite Distinction &bull; 75%</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/certi10.jpg" alt="Cloud Computing IIT Kharagpur" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Cloud Computing (Elite)</h3>
+                      <p class="slide-desc">Conferred Elite grade by IIT Kharagpur. Virtualization, distributed storage, hypervisors, and security.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">75%</span><span class="slide-stat-lbl">Final Score</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">29.7K</span><span class="slide-stat-lbl">Candidates</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Elite</span><span class="slide-stat-lbl">Distinction</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">NPTEL25CS11S1044100191</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 04: Neo4j Certified Professional -->
+                <div class="cert-slide-card slide-theme-neo4j" data-cert-src="/assets/certificates/certi6.jpg" data-cert-title="Neo4j Certified Professional" data-cert-issuer="Neo4j GraphAcademy" data-cert-id="e1f87066-200b-4d95-806a-dcc59f8e4331" data-cert-badge="Certified Professional" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">04</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">NEO4J GRAPHACADEMY</span>
+                    </div>
+                    <div class="slide-pill pill-cyan">
+                      <span class="status-pulse-dot dot-cyan"></span>
+                      <span>Certified Professional</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/certi6.jpg" alt="Neo4j Certified Professional" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Neo4j Certified Professional</h3>
+                      <p class="slide-desc">Property graph databases, Cypher query optimization, index tuning, and AI enterprise knowledge graphs.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">Cypher</span><span class="slide-stat-lbl">Language</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Graphs</span><span class="slide-stat-lbl">Data Model</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Certified</span><span class="slide-stat-lbl">Credential</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">e1f87066-200b-4d95-806a</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 05: AICTE Artificial Intelligence Internship -->
+                <div class="cert-slide-card slide-theme-emerald" data-cert-src="/assets/certificates/cert_aicte_rendered.png" data-cert-title="Artificial Intelligence Internship Certificate" data-cert-issuer="AICTE &times; Edunet Foundation (IBM SkillsBuild)" data-cert-id="STU680f8b1847f931745849112" data-cert-badge="National Internship" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">05</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">AICTE &times; EDUNET &bull; IBM SKILLSBUILD</span>
+                    </div>
+                    <div class="slide-pill pill-emerald">
+                      <span class="status-pulse-dot dot-emerald"></span>
+                      <span>National Internship</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/cert_aicte_rendered.png" alt="AICTE AI Internship" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">AICTE AI Internship</h3>
+                      <p class="slide-desc">National AI internship supported by IBM SkillsBuild. Computer vision, deep neural nets, and applied ML.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">AICTE</span><span class="slide-stat-lbl">Government</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">IBM</span><span class="slide-stat-lbl">SkillsBuild</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Applied</span><span class="slide-stat-lbl">Deep Learning</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">STU680f8b1847f931745849</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 06: Google Networking (White / Light Slide Theme) -->
+                <div class="cert-slide-card slide-theme-light" data-cert-src="/assets/certificates/certi11.jpeg" data-cert-title="Google &mdash; The Bits and Bytes of Computer Networking" data-cert-issuer="Google &bull; Coursera" data-cert-id="HZ0I2JR1TJM6" data-cert-badge="Google Certified" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">06</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">GOOGLE &bull; COURSERA</span>
+                    </div>
+                    <div class="slide-pill pill-google">
+                      <span class="status-pulse-dot dot-google"></span>
+                      <span>Google Certified</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/certi11.jpeg" alt="Google Networking" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Computer Networking</h3>
+                      <p class="slide-desc">The Bits and Bytes of Networking. TCP/IP 5-layer stack, packet routing, DNS, subnetting, and VPCs.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">5 Layers</span><span class="slide-stat-lbl">TCP/IP Stack</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">VPC</span><span class="slide-stat-lbl">Cloud Subnets</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Google</span><span class="slide-stat-lbl">Verified</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">HZ0I2JR1TJM6</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 07: Hacktoberfest 2026 (Bold Rust Theme) -->
+                <div class="cert-slide-card slide-theme-rust" data-cert-src="/assets/certificates/hacktoberfest-2026-completionist-plus-plus-certificate-2026 (3).png" data-cert-title="Hacktoberfest 2026 Completionist++" data-cert-issuer="DigitalOcean &bull; MLH &bull; DEV" data-cert-id="HF-2026-COMPLETIONIST-PLUS" data-cert-badge="Completionist++ Tier" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">07</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">DIGITALOCEAN &bull; MLH &bull; DEV</span>
+                    </div>
+                    <div class="slide-pill pill-white">
+                      <span class="status-pulse-dot dot-white"></span>
+                      <span>Completionist++</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/hacktoberfest-2026-completionist-plus-plus-certificate-2026 (3).png" alt="Hacktoberfest Completionist++" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Hacktoberfest Completionist++</h3>
+                      <p class="slide-desc">Highest tier honor in Hacktoberfest 2026. Production-grade pull requests and reviews merged in open-source.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">++ Tier</span><span class="slide-stat-lbl">Distinction</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Global</span><span class="slide-stat-lbl">Open Source</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">PRs</span><span class="slide-stat-lbl">Accepted</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">HF-2026-COMPLETIONIST-PLUS</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 08: Vertex AI Prompt Design -->
+                <div class="cert-slide-card slide-theme-purple" data-cert-src="/assets/certificates/certi2.jpg" data-cert-title="Google Cloud &mdash; Prompt Design in Vertex AI &amp; Real World AI" data-cert-issuer="Google Cloud Skills Boost" data-cert-id="GCLOUD-BADGE-VERTEX-AI" data-cert-badge="Skill Badges" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">08</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">GOOGLE CLOUD SKILLS BOOST</span>
+                    </div>
+                    <div class="slide-pill pill-purple">
+                      <span class="status-pulse-dot dot-purple"></span>
+                      <span>Skill Badges</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/certi2.jpg" alt="Prompt Design in Vertex AI" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Prompt Design in Vertex AI</h3>
+                      <p class="slide-desc">Dual Google Cloud credentials in Prompt Design & Real World AI with Gemini and Imagen 3 evaluated in live labs.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">Vertex</span><span class="slide-stat-lbl">AI Studio</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Imagen 3</span><span class="slide-stat-lbl">Diffusion</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">2x</span><span class="slide-stat-lbl">Skill Badges</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">GCLOUD-BADGE-VERTEX-AI</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 09: MathWorks MATLAB Onramp -->
+                <div class="cert-slide-card slide-theme-coral" data-cert-src="/assets/certificates/certi1.jpg" data-cert-title="MathWorks &mdash; MATLAB Onramp (100% Completion)" data-cert-issuer="MathWorks" data-cert-id="MATHWORKS-MATLAB-100" data-cert-badge="100% Completion" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer">
+                      <span class="slide-idx">09</span>
+                      <span class="slide-slash">//</span>
+                      <span class="slide-issuer">MATHWORKS</span>
+                    </div>
+                    <div class="slide-pill pill-coral">
+                      <span class="status-pulse-dot dot-coral"></span>
+                      <span>100% Completion</span>
+                    </div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box">
+                      <img src="/assets/certificates/certi1.jpg" alt="MathWorks MATLAB Onramp" class="slide-thumb-img" loading="lazy" />
+                      <div class="slide-thumb-overlay">
+                        <span class="slide-zoom-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg></span>
+                      </div>
+                    </div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">MATLAB Computational Eng.</h3>
+                      <p class="slide-desc">Linear algebra matrix vectorization, automated data analysis, multidimensional systems, and numerical modeling.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">100%</span><span class="slide-stat-lbl">Completion</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Matrix</span><span class="slide-stat-lbl">Linear Algebra</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">MathWorks</span><span class="slide-stat-lbl">Verified</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">MATHWORKS-MATLAB-100</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- SET 2: Identical 9 Slides for 100% Seamless Infinite Loop -->
+                <!-- Slide 10: Repeat 01 -->
+                <div class="cert-slide-card slide-theme-gold" data-cert-src="/assets/certificates/certi9.jpg" data-cert-title="Marketing Analytics &mdash; Elite + Topper Top 1% (100% Score)" data-cert-issuer="NPTEL &bull; IIT Kharagpur (Govt. of India)" data-cert-id="NPTEL26MG33S952401760" data-cert-badge="Top 1% Topper &bull; 100%" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">01</span><span class="slide-slash">//</span><span class="slide-issuer">NPTEL &bull; IIT KHARAGPUR</span></div>
+                    <div class="slide-pill pill-gold"><span class="status-pulse-dot dot-gold"></span><span>Top 1% Topper &bull; 100%</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/certi9.jpg" alt="Marketing Analytics" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Marketing Analytics</h3>
+                      <p class="slide-desc">Elite Distinction + National Top 1% Topper. Statistical modeling, CLV regressions, and pricing models.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">100%</span><span class="slide-stat-lbl">Aggregate</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">25/25</span><span class="slide-stat-lbl">Assignments</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">75/75</span><span class="slide-stat-lbl">Exam Score</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">NPTEL26MG33S952401760</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 11: Repeat 02 -->
+                <div class="cert-slide-card slide-theme-gcloud" data-cert-src="/assets/certificates/cert_google_genai_rendered.png" data-cert-title="Google Cloud Gen AI Academy Specialist" data-cert-issuer="Google Cloud &times; Hack2Skill" data-cert-id="2025H2S04GENAI-A600254" data-cert-badge="Gen AI Academy" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">02</span><span class="slide-slash">//</span><span class="slide-issuer">GOOGLE CLOUD &times; HACK2SKILL</span></div>
+                    <div class="slide-pill pill-blue"><span class="status-pulse-dot dot-blue"></span><span>Gen AI Academy</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/cert_google_genai_rendered.png" alt="Google Cloud Gen AI" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Gen AI Academy Specialist</h3>
+                      <p class="slide-desc">Vertex AI, Gemini APIs, multimodal prompt design, Imagen 3, LangChain, and enterprise production RAG.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">Vertex AI</span><span class="slide-stat-lbl">Platform</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Gemini</span><span class="slide-stat-lbl">Multimodal</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">RAG</span><span class="slide-stat-lbl">Architecture</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">2025H2S04GENAI-A600254</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 12: Repeat 03 -->
+                <div class="cert-slide-card slide-theme-cyan" data-cert-src="/assets/certificates/certi10.jpg" data-cert-title="Cloud Computing &mdash; Elite Distinction" data-cert-issuer="NPTEL &bull; IIT Kharagpur (Govt. of India)" data-cert-id="NPTEL25CS11S1044100191" data-cert-badge="Elite Distinction &bull; 75%" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">03</span><span class="slide-slash">//</span><span class="slide-issuer">NPTEL &bull; IIT KHARAGPUR</span></div>
+                    <div class="slide-pill pill-cyan"><span class="status-pulse-dot dot-cyan"></span><span>Elite Distinction &bull; 75%</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/certi10.jpg" alt="Cloud Computing" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Cloud Computing (Elite)</h3>
+                      <p class="slide-desc">Conferred Elite grade by IIT Kharagpur. Virtualization, distributed storage, hypervisors, and security.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">75%</span><span class="slide-stat-lbl">Final Score</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">29.7K</span><span class="slide-stat-lbl">Candidates</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Elite</span><span class="slide-stat-lbl">Distinction</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">NPTEL25CS11S1044100191</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 13: Repeat 04 -->
+                <div class="cert-slide-card slide-theme-neo4j" data-cert-src="/assets/certificates/certi6.jpg" data-cert-title="Neo4j Certified Professional" data-cert-issuer="Neo4j GraphAcademy" data-cert-id="e1f87066-200b-4d95-806a-dcc59f8e4331" data-cert-badge="Certified Professional" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">04</span><span class="slide-slash">//</span><span class="slide-issuer">NEO4J GRAPHACADEMY</span></div>
+                    <div class="slide-pill pill-cyan"><span class="status-pulse-dot dot-cyan"></span><span>Certified Professional</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/certi6.jpg" alt="Neo4j" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Neo4j Certified Professional</h3>
+                      <p class="slide-desc">Property graph databases, Cypher query optimization, index tuning, and AI enterprise knowledge graphs.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">Cypher</span><span class="slide-stat-lbl">Language</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Graphs</span><span class="slide-stat-lbl">Data Model</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Certified</span><span class="slide-stat-lbl">Credential</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">e1f87066-200b-4d95-806a</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 14: Repeat 05 -->
+                <div class="cert-slide-card slide-theme-emerald" data-cert-src="/assets/certificates/cert_aicte_rendered.png" data-cert-title="Artificial Intelligence Internship Certificate" data-cert-issuer="AICTE &times; Edunet Foundation (IBM SkillsBuild)" data-cert-id="STU680f8b1847f931745849112" data-cert-badge="National Internship" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">05</span><span class="slide-slash">//</span><span class="slide-issuer">AICTE &times; EDUNET &bull; IBM SKILLSBUILD</span></div>
+                    <div class="slide-pill pill-emerald"><span class="status-pulse-dot dot-emerald"></span><span>National Internship</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/cert_aicte_rendered.png" alt="AICTE" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">AICTE AI Internship</h3>
+                      <p class="slide-desc">National AI internship supported by IBM SkillsBuild. Computer vision, deep neural nets, and applied ML.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">AICTE</span><span class="slide-stat-lbl">Government</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">IBM</span><span class="slide-stat-lbl">SkillsBuild</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Applied</span><span class="slide-stat-lbl">Deep Learning</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">STU680f8b1847f931745849</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 15: Repeat 06 -->
+                <div class="cert-slide-card slide-theme-light" data-cert-src="/assets/certificates/certi11.jpeg" data-cert-title="Google &mdash; The Bits and Bytes of Computer Networking" data-cert-issuer="Google &bull; Coursera" data-cert-id="HZ0I2JR1TJM6" data-cert-badge="Google Certified" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">06</span><span class="slide-slash">//</span><span class="slide-issuer">GOOGLE &bull; COURSERA</span></div>
+                    <div class="slide-pill pill-google"><span class="status-pulse-dot dot-google"></span><span>Google Certified</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/certi11.jpeg" alt="Google Networking" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Computer Networking</h3>
+                      <p class="slide-desc">The Bits and Bytes of Networking. TCP/IP 5-layer stack, packet routing, DNS, subnetting, and VPCs.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">5 Layers</span><span class="slide-stat-lbl">TCP/IP Stack</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">VPC</span><span class="slide-stat-lbl">Cloud Subnets</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Google</span><span class="slide-stat-lbl">Verified</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">HZ0I2JR1TJM6</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 16: Repeat 07 -->
+                <div class="cert-slide-card slide-theme-rust" data-cert-src="/assets/certificates/hacktoberfest-2026-completionist-plus-plus-certificate-2026 (3).png" data-cert-title="Hacktoberfest 2026 Completionist++" data-cert-issuer="DigitalOcean &bull; MLH &bull; DEV" data-cert-id="HF-2026-COMPLETIONIST-PLUS" data-cert-badge="Completionist++ Tier" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">07</span><span class="slide-slash">//</span><span class="slide-issuer">DIGITALOCEAN &bull; MLH &bull; DEV</span></div>
+                    <div class="slide-pill pill-white"><span class="status-pulse-dot dot-white"></span><span>Completionist++</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/hacktoberfest-2026-completionist-plus-plus-certificate-2026 (3).png" alt="Hacktoberfest" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Hacktoberfest Completionist++</h3>
+                      <p class="slide-desc">Highest tier honor in Hacktoberfest 2026. Production-grade pull requests and reviews merged in open-source.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">++ Tier</span><span class="slide-stat-lbl">Distinction</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Global</span><span class="slide-stat-lbl">Open Source</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">PRs</span><span class="slide-stat-lbl">Accepted</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">HF-2026-COMPLETIONIST-PLUS</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 17: Repeat 08 -->
+                <div class="cert-slide-card slide-theme-purple" data-cert-src="/assets/certificates/certi2.jpg" data-cert-title="Google Cloud &mdash; Prompt Design in Vertex AI &amp; Real World AI" data-cert-issuer="Google Cloud Skills Boost" data-cert-id="GCLOUD-BADGE-VERTEX-AI" data-cert-badge="Skill Badges" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">08</span><span class="slide-slash">//</span><span class="slide-issuer">GOOGLE CLOUD SKILLS BOOST</span></div>
+                    <div class="slide-pill pill-purple"><span class="status-pulse-dot dot-purple"></span><span>Skill Badges</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/certi2.jpg" alt="Prompt Design" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">Prompt Design in Vertex AI</h3>
+                      <p class="slide-desc">Dual Google Cloud credentials in Prompt Design & Real World AI with Gemini and Imagen 3 evaluated in live labs.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">Vertex</span><span class="slide-stat-lbl">AI Studio</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Imagen 3</span><span class="slide-stat-lbl">Diffusion</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">2x</span><span class="slide-stat-lbl">Skill Badges</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">GCLOUD-BADGE-VERTEX-AI</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+
+                <!-- Slide 18: Repeat 09 -->
+                <div class="cert-slide-card slide-theme-coral" data-cert-src="/assets/certificates/certi1.jpg" data-cert-title="MathWorks &mdash; MATLAB Onramp (100% Completion)" data-cert-issuer="MathWorks" data-cert-id="MATHWORKS-MATLAB-100" data-cert-badge="100% Completion" data-cursor="hover">
+                  <div class="slide-header">
+                    <div class="slide-num-issuer"><span class="slide-idx">09</span><span class="slide-slash">//</span><span class="slide-issuer">MATHWORKS</span></div>
+                    <div class="slide-pill pill-coral"><span class="status-pulse-dot dot-coral"></span><span>100% Completion</span></div>
+                  </div>
+                  <div class="slide-body">
+                    <div class="slide-thumb-box"><img src="/assets/certificates/certi1.jpg" alt="MathWorks MATLAB" class="slide-thumb-img" loading="lazy" /></div>
+                    <div class="slide-content">
+                      <h3 class="slide-title">MATLAB Computational Eng.</h3>
+                      <p class="slide-desc">Linear algebra matrix vectorization, automated data analysis, multidimensional systems, and numerical modeling.</p>
+                      <div class="slide-metrics-row">
+                        <div class="slide-stat-item"><span class="slide-stat-num">100%</span><span class="slide-stat-lbl">Completion</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">Matrix</span><span class="slide-stat-lbl">Linear Algebra</span></div>
+                        <div class="slide-stat-item"><span class="slide-stat-num">MathWorks</span><span class="slide-stat-lbl">Verified</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slide-footer">
+                    <div class="slide-meta"><span class="slide-meta-label">ID:</span><code class="slide-meta-val">MATHWORKS-MATLAB-100</code></div>
+                    <div class="slide-action"><span>View Credential</span><span class="slide-arrow">&nearr;</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Grid View (Toggleable 3x3 stationary card view) -->
+          <div class="certifications-grid-view" id="cert-grid-view" style="display: none;">
+            <div class="certifications-grid">
+              <!-- Cert 1: Marketing Analytics - Elite + Topper Top 1% (IIT Kharagpur & NPTEL) -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/certi9.jpg" data-cert-title="Marketing Analytics &mdash; Elite + Topper Top 1% (100% Score)" data-cert-issuer="NPTEL &bull; IIT Kharagpur (Govt. of India)" data-cert-id="NPTEL26MG33S952401760" data-cert-badge="Elite + Topper Top 1%">
+                <div class="cert-accent-bar accent-nptel"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-nptel">
+                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+                      <circle cx="20" cy="20" r="18" fill="#0B2545" stroke="#F59E0B" stroke-width="2"/>
+                      <path d="M20 9L29 14.5L20 20L11 14.5L20 9Z" fill="#F59E0B"/>
+                      <path d="M14 17.5V23C14 26 20 28 20 28C20 28 26 26 26 23V17.5" stroke="#F59E0B" stroke-width="1.8" fill="none"/>
+                      <circle cx="29" cy="21" r="1.5" fill="#F59E0B"/>
+                      <line x1="29" y1="21" x2="29" y2="25" stroke="#F59E0B" stroke-width="1.5"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-gold">
+                    <span class="status-pulse-dot dot-gold"></span>
+                    <span>Top 1% Topper &bull; 100%</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/certi9.jpg" alt="Marketing Analytics IIT Kharagpur Elite Topper" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">NPTEL &bull; IIT Kharagpur</span>
+                  <h3 class="cert-title">Marketing Analytics (Elite + Topper)</h3>
+                  <p class="cert-desc">Ranked in the <strong>Top 1% nationwide</strong> with a perfect <strong>100% aggregate score</strong> (25/25 assignments, 75/75 proctored examination). Evaluated on statistical modeling, customer lifetime value, and quantitative marketing models.</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">100% Perfect Score</span>
+                    <span class="cert-tag">Top 1% Topper</span>
+                    <span class="cert-tag">Statistical Modeling</span>
+                    <span class="cert-tag">IIT Kharagpur</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: NPTEL26MG33S952401760</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 2: Google Cloud - Gen AI Academy Specialist -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/cert_google_genai_rendered.png" data-cert-title="Google Cloud Gen AI Academy Specialist" data-cert-issuer="Google Cloud &times; Hack2Skill" data-cert-id="2025H2S04GENAI-A600254" data-cert-badge="Gen AI Specialist">
+                <div class="cert-accent-bar accent-gcloud"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-gcloud">
+                    <svg width="28" height="22" viewBox="0 -25 256 256">
+                      <path fill="#EA4335" d="m170.252 56.819 22.253-22.253 1.483-9.37C153.437-11.677 88.976-7.496 52.42 33.92 42.267 45.423 34.734 59.764 30.717 74.573l7.97-1.123 44.505-7.34 3.436-3.513c19.797-21.742 53.27-24.667 76.128-6.168l7.496.39Z"/>
+                      <path fill="#4285F4" d="M224.205 73.918a100.249 100.249 0 0 0-30.217-48.722l-31.232 31.232a55.515 55.515 0 0 1 20.379 44.037v5.544c15.35 0 27.797 12.445 27.797 27.796 0 15.352-12.446 27.485-27.797 27.485h-55.671l-5.466 5.934v33.34l5.466 5.231h55.67c39.93.311 72.553-31.494 72.864-71.424a72.303 72.303 0 0 0-31.793-60.453"/>
+                      <path fill="#34A853" d="M71.87 205.796h55.593V161.29H71.87a27.275 27.275 0 0 1-11.399-2.498l-7.887 2.42-22.409 22.253-1.952 7.574c12.567 9.489 27.9 14.825 43.647 14.757"/>
+                      <path fill="#FBBC05" d="M71.87 61.425C31.94 61.664-.237 94.228.001 134.159a72.301 72.301 0 0 0 28.222 56.88l32.248-32.246c-13.99-6.322-20.208-22.786-13.887-36.776 6.32-13.99 22.786-20.208 36.775-13.888a27.796 27.796 0 0 1 13.887 13.888l32.248-32.248A72.224 72.224 0 0 0 71.87 61.425"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-active">
+                    <span class="status-pulse-dot dot-gold"></span>
+                    <span>Gen AI Academy</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/cert_google_genai_rendered.png" alt="Google Cloud Gen AI Academy Certificate" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">Google Cloud &times; Hack2Skill</span>
+                  <h3 class="cert-title">Gen AI Academy Specialist</h3>
+                  <p class="cert-desc">Completed an intensive engineering curriculum covering Google Vertex AI, Gemini model APIs, multimodal prompt architecture, Imagen generation, LangChain, and production-grade Retrieval-Augmented Generation (RAG).</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">Vertex AI</span>
+                    <span class="cert-tag">Gemini API</span>
+                    <span class="cert-tag">Multimodal RAG</span>
+                    <span class="cert-tag">Prompt Design</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: 2025H2S04GENAI-A600254</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 3: Cloud Computing - Elite (IIT Kharagpur & NPTEL) -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/certi10.jpg" data-cert-title="Cloud Computing &mdash; Elite Distinction" data-cert-issuer="NPTEL &bull; IIT Kharagpur (Govt. of India)" data-cert-id="NPTEL25CS11S1044100191" data-cert-badge="Elite Distinction">
+                <div class="cert-accent-bar accent-iit"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-iit">
+                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+                      <circle cx="20" cy="20" r="18" fill="#0284C7" stroke="#38BDF8" stroke-width="2"/>
+                      <path d="M12 24C10.5 24 9 22.8 9 21C9 19.4 10.3 18.1 11.9 18C12.4 15.2 14.8 13 17.7 13C20.1 13 22.1 14.5 23 16.6C23.5 16.2 24.2 16 25 16C26.7 16 28 17.3 28 19C28 19.3 27.9 19.6 27.8 19.9C29.1 20.3 30 21.5 30 23C30 24.7 28.7 26 27 26H13C12.4 26 12 25.6 12 24Z" fill="#FFFFFF"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-verified">
+                    <span class="status-pulse-dot dot-green"></span>
+                    <span>Elite Distinction &bull; 75%</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/certi10.jpg" alt="Cloud Computing IIT Kharagpur Elite Certificate" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">NPTEL &bull; IIT Kharagpur</span>
+                  <h3 class="cert-title">Cloud Computing (Elite Distinction)</h3>
+                  <p class="cert-desc">Conferred Elite Grade by IIT Kharagpur amongst the top performers from over 29,700 candidates. Rigorous assessment across virtualization, distributed file systems, cloud microservices, and resource scheduling.</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">Elite Distinction</span>
+                    <span class="cert-tag">IIT Kharagpur</span>
+                    <span class="cert-tag">Cloud Architecture</span>
+                    <span class="cert-tag">Virtualization</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: NPTEL25CS11S1044100191</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 4: Neo4j Certified Professional -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/certi6.jpg" data-cert-title="Neo4j Certified Professional" data-cert-issuer="Neo4j GraphAcademy" data-cert-id="e1f87066-200b-4d95-806a-dcc59f8e4331" data-cert-badge="Certified Professional">
+                <div class="cert-accent-bar accent-neo4j"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-neo4j">
+                    <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+                      <rect width="100" height="100" rx="20" fill="#001E2B"/>
+                      <circle cx="28" cy="70" r="13" fill="#018BFF"/>
+                      <circle cx="50" cy="28" r="15" fill="#018BFF"/>
+                      <circle cx="72" cy="70" r="13" fill="#018BFF"/>
+                      <line x1="36" y1="62" x2="44" y2="39" stroke="#FFFFFF" stroke-width="6"/>
+                      <line x1="64" y1="62" x2="56" y2="39" stroke="#FFFFFF" stroke-width="6"/>
+                      <line x1="39" y1="70" x2="61" y2="70" stroke="#FFFFFF" stroke-width="6"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-verified">
+                    <span class="status-pulse-dot dot-green"></span>
+                    <span>Certified Professional</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/certi6.jpg" alt="Neo4j Certified Professional Certificate" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">Neo4j GraphAcademy</span>
+                  <h3 class="cert-title">Neo4j Certified Professional</h3>
+                  <p class="cert-desc">Validated official mastery in native property graph databases, Cypher query optimization, graph traversal algorithms, schema modeling, and scalable graph data structures for AI knowledge graphs.</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">Graph Databases</span>
+                    <span class="cert-tag">Cypher QL</span>
+                    <span class="cert-tag">Knowledge Graphs</span>
+                    <span class="cert-tag">Neo4j</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: e1f87066-200b-4d95-806a</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 5: AICTE Artificial Intelligence Internship -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/cert_aicte_rendered.png" data-cert-title="Artificial Intelligence Internship Certificate" data-cert-issuer="AICTE &times; Edunet Foundation (IBM SkillsBuild)" data-cert-id="STU680f8b1847f931745849112" data-cert-badge="National Internship">
+                <div class="cert-accent-bar accent-aicte"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-aicte">
+                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+                      <circle cx="20" cy="20" r="18" fill="#FFFFFF" stroke="#059669" stroke-width="2"/>
+                      <path d="M20 8L27 15H22V24H18V15H13L20 8Z" fill="#059669"/>
+                      <rect x="12" y="26" width="16" height="3" rx="1.5" fill="#D97706"/>
+                      <circle cx="20" cy="32" r="2" fill="#059669"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-verified">
+                    <span class="status-pulse-dot dot-green"></span>
+                    <span>National Internship</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/cert_aicte_rendered.png" alt="AICTE AI Internship Certificate" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">AICTE &times; Edunet &bull; IBM SkillsBuild</span>
+                  <h3 class="cert-title">Artificial Intelligence Internship</h3>
+                  <p class="cert-desc">Completed the official AICTE national AI internship program supported by IBM SkillsBuild. Built applied computer vision models, neural networks, natural language processing pipelines, and enterprise automation solutions.</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">AICTE Approved</span>
+                    <span class="cert-tag">IBM SkillsBuild</span>
+                    <span class="cert-tag">Computer Vision</span>
+                    <span class="cert-tag">Applied ML</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: STU680f8b1847f931745849</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 6: Google (Coursera) - Computer Networking -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/certi11.jpeg" data-cert-title="Google &mdash; The Bits and Bytes of Computer Networking" data-cert-issuer="Google &bull; Coursera" data-cert-id="HZ0I2JR1TJM6" data-cert-badge="Google Certified">
+                <div class="cert-accent-bar accent-google"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-google">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-verified">
+                    <span class="status-pulse-dot dot-green"></span>
+                    <span>Google Certified</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/certi11.jpeg" alt="Google Networking Coursera Certificate" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">Google &bull; Coursera</span>
+                  <h3 class="cert-title">Computer Networking Specialist</h3>
+                  <p class="cert-desc">Google-issued credential validating foundational and production network operations: TCP/IP five-layer model, packet routing protocols, subnetting, DHCP, DNS resolutions, and cloud virtual private networks (VPCs).</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">Google Verified</span>
+                    <span class="cert-tag">TCP/IP Stack</span>
+                    <span class="cert-tag">VPC Subnets</span>
+                    <span class="cert-tag">DNS &amp; Routing</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: HZ0I2JR1TJM6</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 7: Hacktoberfest 2026 Completionist++ -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/hacktoberfest-2026-completionist-plus-plus-certificate-2026 (3).png" data-cert-title="Hacktoberfest 2026 Completionist++" data-cert-issuer="DigitalOcean &bull; MLH &bull; DEV" data-cert-id="HF-2026-COMPLETIONIST-PLUS" data-cert-badge="Completionist++ Tier">
+                <div class="cert-accent-bar accent-hacktoberfest"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-hacktoberfest">
+                    <img src="/assets/logos/hacktoberfest-logo.png" alt="Hacktoberfest" class="cert-logo-img" />
+                  </div>
+                  <div class="cert-status-pill status-orange">
+                    <span class="status-pulse-dot dot-orange"></span>
+                    <span>Completionist++</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/hacktoberfest-2026-completionist-plus-plus-certificate-2026 (3).png" alt="Hacktoberfest 2026 Completionist++ Certificate" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">DigitalOcean &bull; MLH &bull; DEV</span>
+                  <h3 class="cert-title">Hacktoberfest Completionist++</h3>
+                  <p class="cert-desc">Honored with the top-tier Completionist++ award in Hacktoberfest 2026 for impactful open-source contributions, merged feature pull requests, and peer code reviews across public developer software repositories.</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">Completionist++</span>
+                    <span class="cert-tag">Open Source</span>
+                    <span class="cert-tag">Git / GitHub</span>
+                    <span class="cert-tag">Code Review</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: HF-2026-COMPLETIONIST-PLUS</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 8: Google Cloud Skill Badges - Vertex AI & Generative AI -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/certi2.jpg" data-cert-title="Google Cloud &mdash; Prompt Design in Vertex AI &amp; Real World AI" data-cert-issuer="Google Cloud Skills Boost" data-cert-id="GCLOUD-BADGE-VERTEX-AI" data-cert-badge="Skill Badges">
+                <div class="cert-accent-bar accent-gcloud"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-gcloud">
+                    <svg width="28" height="22" viewBox="0 -25 256 256">
+                      <path fill="#EA4335" d="m170.252 56.819 22.253-22.253 1.483-9.37C153.437-11.677 88.976-7.496 52.42 33.92 42.267 45.423 34.734 59.764 30.717 74.573l7.97-1.123 44.505-7.34 3.436-3.513c19.797-21.742 53.27-24.667 76.128-6.168l7.496.39Z"/>
+                      <path fill="#4285F4" d="M224.205 73.918a100.249 100.249 0 0 0-30.217-48.722l-31.232 31.232a55.515 55.515 0 0 1 20.379 44.037v5.544c15.35 0 27.797 12.445 27.797 27.796 0 15.352-12.446 27.485-27.797 27.485h-55.671l-5.466 5.934v33.34l5.466 5.231h55.67c39.93.311 72.553-31.494 72.864-71.424a72.303 72.303 0 0 0-31.793-60.453"/>
+                      <path fill="#34A853" d="M71.87 205.796h55.593V161.29H71.87a27.275 27.275 0 0 1-11.399-2.498l-7.887 2.42-22.409 22.253-1.952 7.574c12.567 9.489 27.9 14.825 43.647 14.757"/>
+                      <path fill="#FBBC05" d="M71.87 61.425C31.94 61.664-.237 94.228.001 134.159a72.301 72.301 0 0 0 28.222 56.88l32.248-32.246c-13.99-6.322-20.208-22.786-13.887-36.776 6.32-13.99 22.786-20.208 36.775-13.888a27.796 27.796 0 0 1 13.887 13.888l32.248-32.248A72.224 72.224 0 0 0 71.87 61.425"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-active">
+                    <span class="status-pulse-dot dot-gold"></span>
+                    <span>Google Cloud Badges</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/certi2.jpg" alt="Google Cloud Skill Badge Prompt Design" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">Google Cloud Skills Boost</span>
+                  <h3 class="cert-title">Prompt Design in Vertex AI</h3>
+                  <p class="cert-desc">Earned official Google Cloud Skill Badges in "Prompt Design in Vertex AI" and "Build Real World AI Applications with Gemini and Imagen". Tested in hands-on production labs on parameter tuning and zero-shot reasoning.</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">Prompt Design</span>
+                    <span class="cert-tag">Vertex AI</span>
+                    <span class="cert-tag">Gemini &amp; Imagen</span>
+                    <span class="cert-tag">Hands-on Labs</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: GCLOUD-BADGE-VERTEX-AI</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Cert 9: MathWorks - MATLAB Onramp -->
+              <div class="cert-card glass-card-interactive" data-tilt data-cert-src="/assets/certificates/certi1.jpg" data-cert-title="MathWorks &mdash; MATLAB Onramp (100% Completion)" data-cert-issuer="MathWorks" data-cert-id="MATHWORKS-MATLAB-100" data-cert-badge="100% Completion">
+                <div class="cert-accent-bar accent-mathworks"></div>
+                <div class="cert-card-top">
+                  <div class="cert-issuer-badge badge-mathworks">
+                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none">
+                      <circle cx="20" cy="20" r="18" fill="#FFF5ED" stroke="#D13800" stroke-width="2"/>
+                      <path d="M10 27L16 13L22 25L28 17L31 27" stroke="#D13800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <polygon points="10,27 16,13 22,25 28,17 31,27" fill="rgba(209, 56, 0, 0.15)"/>
+                    </svg>
+                  </div>
+                  <div class="cert-status-pill status-verified">
+                    <span class="status-pulse-dot dot-green"></span>
+                    <span>100% Completion</span>
+                  </div>
+                </div>
+                <div class="cert-thumb-wrap">
+                  <img src="/assets/certificates/certi1.jpg" alt="MathWorks MATLAB Onramp Certificate" class="cert-thumb-img" loading="lazy" />
+                  <div class="cert-thumb-overlay">
+                    <span class="cert-thumb-zoom-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="cert-content">
+                  <span class="cert-issuer">MathWorks</span>
+                  <h3 class="cert-title">MATLAB Computational Engineering</h3>
+                  <p class="cert-desc">Mastered linear algebra computing, multi-dimensional array vectorization, automated data visualizations, dynamic systems analysis, and mathematical modeling within the MATLAB environment.</p>
+                  <div class="cert-tags">
+                    <span class="cert-tag">MathWorks</span>
+                    <span class="cert-tag">MATLAB</span>
+                    <span class="cert-tag">Linear Algebra</span>
+                    <span class="cert-tag">Data Modeling</span>
+                  </div>
+                </div>
+                <div class="cert-card-bottom">
+                  <span class="cert-meta-id">ID: MATHWORKS-MATLAB-100</span>
+                  <button type="button" class="cert-link-btn cert-open-btn" data-cursor="hover">
+                    <span>View Credential</span>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Work / Projects Section (Interactive 3D Hardcover Book Gallery & Grid) -->
+      <section class="projects-section" id="projects">
+        <span id="project"></span>
+        <div class="projects-header-row">
+          <div class="projects-header">
+            <div class="tag-pill">
+              <span class="tag-dot"></span>
+              <span>Featured Engineering &amp; AI Compendium</span>
+            </div>
+            <h2 class="section-title">Selected Projects &amp; Systems</h2>
+            <p class="section-subtitle">
+              A curated compendium of production systems, algorithmic agro-engines, enterprise data pipelines, voice AI models, and cryptographic cipher suites.
+            </p>
+          </div>
+
+          <!-- Interactive View & Filter Controls -->
+          <div class="project-controls-bar">
+            <!-- View Modes: 3D Hardcover Bookshelf vs Grid View -->
+            <div class="project-view-tabs">
+              <button type="button" class="project-tab-btn active" id="tab-proj-cylinder" data-cursor="hover">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span>3D Bookshelf Gallery</span>
+              </button>
+              <button type="button" class="project-tab-btn" id="tab-proj-grid" data-cursor="hover">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>Grid View</span>
+              </button>
+            </div>
+
+            <!-- Filter Tabs for Grid View -->
+            <div class="project-filters" id="project-filters" style="display: none;">
+              <button class="filter-btn active" data-filter="all" data-cursor="hover">All (4)</button>
+              <button class="filter-btn" data-filter="ai-data" data-cursor="hover">AI &amp; Data</button>
+              <button class="filter-btn" data-filter="systems" data-cursor="hover">Algorithms &amp; Security</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 1: 3D Hardcover Bookshelf Gallery -->
+        <div class="project-bookshelf-wrap" id="project-cylinder-view">
+          <div class="bookshelf-stage" id="bookshelf-stage">
+            <!-- Navigational Arrow Buttons -->
+            <button class="bookshelf-nav-btn prev-btn" id="cyl-prev-btn" aria-label="Previous Book Volume" data-cursor="hover">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="bookshelf-nav-btn next-btn" id="cyl-next-btn" aria-label="Next Book Volume" data-cursor="hover">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- 3D Hardcover Books Row -->
+            <div class="bookshelf-track" id="cylinder-track">
+            <!-- Book VOL. I: THE URBAN AGRO-ENGINE -->
+            <div class="book-card book-theme-emerald" data-index="0" data-project="balconize" data-cursor="hover">
+              <!-- Book Spine (Physical Hardcover Book Side) -->
+              <div class="book-spine">
+                <div class="book-headband"></div>
+                <div class="book-rib book-rib-top"></div>
+                
+                <div class="book-spine-header">
+                  <span class="book-vol-tag">VOL. I</span>
+                  <span class="book-spine-emblem">🌱</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-title-wrap">
+                  <h3 class="book-spine-title">THE URBAN AGRO-ENGINE</h3>
+                  <span class="book-spine-subtitle">BALCONIZE • SOLAR GEOMETRY</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-footer">
+                  <span class="book-author">A. PANDEY • HACKATHON WINNER</span>
+                  <span class="book-edition">EDITION 2026</span>
+                </div>
+
+                <div class="book-rib book-rib-bottom"></div>
+                <div class="book-tailband"></div>
+                <div class="book-ribbon"></div>
+              </div>
+
+              <!-- Expanded Book Interior (Reveals Full Project from proj-ash) -->
+              <div class="book-expanded">
+                <div class="book-expanded-header">
+                  <div class="book-browser-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="book-browser-url">balconize.app/engine</div>
+                  <div class="book-badge-pill badge-winner">HACKATHON WINNER</div>
+                </div>
+
+                <div class="book-project-media">
+                  <img src="/assets/projects/balconize.png" alt="Balconize: Urban Micro-Space Solar & Yield Engine" class="book-project-img" loading="lazy" />
+                  <div class="book-media-shine"></div>
+                </div>
+
+                <div class="book-project-info">
+                  <div class="book-meta-top">
+                    <span class="book-category">AgroTech & Solar Architecture</span>
+                    <span class="book-metric-tag">0ms Local Latency</span>
+                  </div>
+                  <h4 class="book-project-heading">Balconize: Urban Micro-Space Solar & Yield Engine</h4>
+                  <p class="book-project-summary">Transforms apartment balcony specs, solar vectors, and container dimensions into an exact 3-tier vertical micro-farm blueprint with 0ms local latency and $0 cloud operating cost.</p>
+                  
+                  <div class="book-tags-row">
+                    <span class="book-tag">AgroTech Engine</span> <span class="book-tag">Solar Geometry</span> <span class="book-tag">Micro-Climate UI</span> <span class="book-tag">$0 Cloud Cost</span>
+                  </div>
+
+                  <div class="book-action-row">
+                    <button type="button" class="btn-primary book-action-btn" data-project="balconize" data-cursor="hover">
+                      <span>View Case Study</span>
+                      <span class="btn-arrow-circle">↗</span>
+                    </button>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="book-repo-btn" data-cursor="hover">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                      <span>Repository</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Book VOL. II: ENTERPRISE PIM PIPELINE -->
+            <div class="book-card book-theme-sapphire" data-index="1" data-project="unihack-engine" data-cursor="hover">
+              <!-- Book Spine (Physical Hardcover Book Side) -->
+              <div class="book-spine">
+                <div class="book-headband"></div>
+                <div class="book-rib book-rib-top"></div>
+                
+                <div class="book-spine-header">
+                  <span class="book-vol-tag">VOL. II</span>
+                  <span class="book-spine-emblem">📊</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-title-wrap">
+                  <h3 class="book-spine-title">ENTERPRISE PIM PIPELINE</h3>
+                  <span class="book-spine-subtitle">UNIHACK • 252-COL MATRIX</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-footer">
+                  <span class="book-author">A. PANDEY • DATA SYSTEMS</span>
+                  <span class="book-edition">EDITION 2026</span>
+                </div>
+
+                <div class="book-rib book-rib-bottom"></div>
+                <div class="book-tailband"></div>
+                <div class="book-ribbon"></div>
+              </div>
+
+              <!-- Expanded Book Interior (Reveals Full Project from proj-ash) -->
+              <div class="book-expanded">
+                <div class="book-expanded-header">
+                  <div class="book-browser-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="book-browser-url">unihack.enterprise/pim-matrix</div>
+                  <div class="book-badge-pill badge-pipeline">ENTERPRISE PIPELINE</div>
+                </div>
+
+                <div class="book-project-media">
+                  <img src="/assets/projects/unihack-engine.png" alt="UniHack Delivery Engine: Product Intelligence" class="book-project-img" loading="lazy" />
+                  <div class="book-media-shine"></div>
+                </div>
+
+                <div class="book-project-info">
+                  <div class="book-meta-top">
+                    <span class="book-category">Enterprise Data Engineering & PIM</span>
+                    <span class="book-metric-tag">252 Schema Matrix</span>
+                  </div>
+                  <h4 class="book-project-heading">UniHack Delivery Engine: Product Intelligence</h4>
+                  <p class="book-project-summary">Automated data enrichment and schema validation engine converting raw, unorganized supplier catalogs into fully populated 252-column enterprise PIM delivery matrices, handling 200MB+ datasets.</p>
+                  
+                  <div class="book-tags-row">
+                    <span class="book-tag">Enterprise PIM</span> <span class="book-tag">252 Schema Cols</span> <span class="book-tag">Python & Pandas</span> <span class="book-tag">ETL Automation</span>
+                  </div>
+
+                  <div class="book-action-row">
+                    <button type="button" class="btn-primary book-action-btn" data-project="unihack-engine" data-cursor="hover">
+                      <span>View Case Study</span>
+                      <span class="btn-arrow-circle">↗</span>
+                    </button>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="book-repo-btn" data-cursor="hover">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                      <span>Repository</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Book VOL. III: LOCAL VOICE INTELLIGENCE -->
+            <div class="book-card book-theme-amethyst" data-index="2" data-project="local-voice-intel" data-cursor="hover">
+              <!-- Book Spine (Physical Hardcover Book Side) -->
+              <div class="book-spine">
+                <div class="book-headband"></div>
+                <div class="book-rib book-rib-top"></div>
+                
+                <div class="book-spine-header">
+                  <span class="book-vol-tag">VOL. III</span>
+                  <span class="book-spine-emblem">🎙️</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-title-wrap">
+                  <h3 class="book-spine-title">LOCAL VOICE INTELLIGENCE</h3>
+                  <span class="book-spine-subtitle">GEMINI AI • MULTIMODAL RAG</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-footer">
+                  <span class="book-author">A. PANDEY • GOOGLE GEMINI</span>
+                  <span class="book-edition">EDITION 2026</span>
+                </div>
+
+                <div class="book-rib book-rib-bottom"></div>
+                <div class="book-tailband"></div>
+                <div class="book-ribbon"></div>
+              </div>
+
+              <!-- Expanded Book Interior (Reveals Full Project from proj-ash) -->
+              <div class="book-expanded">
+                <div class="book-expanded-header">
+                  <div class="book-browser-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="book-browser-url">voice-intel.gemini.ai</div>
+                  <div class="book-badge-pill badge-voice">VOICE AI STUDIO</div>
+                </div>
+
+                <div class="book-project-media">
+                  <img src="/assets/projects/local-voice-intel.png" alt="LocalVoiceIntel: Custom Smart Voice Assistant" class="book-project-img" loading="lazy" />
+                  <div class="book-media-shine"></div>
+                </div>
+
+                <div class="book-project-info">
+                  <div class="book-meta-top">
+                    <span class="book-category">Generative AI & Multimodal RAG</span>
+                    <span class="book-metric-tag">&lt;400ms Voice TTS</span>
+                  </div>
+                  <h4 class="book-project-heading">LocalVoiceIntel: Custom Smart Voice Assistant</h4>
+                  <p class="book-project-summary">Document knowledge base Q&A voice assistant powered by Google Gemini AI Studio, Vector DB embeddings, and real-time speech synthesis for instant contextual spoken responses.</p>
+                  
+                  <div class="book-tags-row">
+                    <span class="book-tag">Google Gemini AI</span> <span class="book-tag">Vector DB RAG</span> <span class="book-tag">Voice Synthesis</span> <span class="book-tag">Python</span>
+                  </div>
+
+                  <div class="book-action-row">
+                    <button type="button" class="btn-primary book-action-btn" data-project="local-voice-intel" data-cursor="hover">
+                      <span>View Case Study</span>
+                      <span class="btn-arrow-circle">↗</span>
+                    </button>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="book-repo-btn" data-cursor="hover">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                      <span>Repository</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Book VOL. IV: THE STEGANOGRAPHIC CIPHER -->
+            <div class="book-card book-theme-obsidian" data-index="3" data-project="eye-module" data-cursor="hover">
+              <!-- Book Spine (Physical Hardcover Book Side) -->
+              <div class="book-spine">
+                <div class="book-headband"></div>
+                <div class="book-rib book-rib-top"></div>
+                
+                <div class="book-spine-header">
+                  <span class="book-vol-tag">VOL. IV</span>
+                  <span class="book-spine-emblem">👁️</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-title-wrap">
+                  <h3 class="book-spine-title">THE STEGANOGRAPHIC CIPHER</h3>
+                  <span class="book-spine-subtitle">EYE MODULE • LSB MASKING</span>
+                </div>
+
+                <div class="book-rib"></div>
+
+                <div class="book-spine-footer">
+                  <span class="book-author">A. PANDEY • INFOSEC RESEARCH</span>
+                  <span class="book-edition">EDITION 2026</span>
+                </div>
+
+                <div class="book-rib book-rib-bottom"></div>
+                <div class="book-tailband"></div>
+                <div class="book-ribbon"></div>
+              </div>
+
+              <!-- Expanded Book Interior (Reveals Full Project from proj-ash) -->
+              <div class="book-expanded">
+                <div class="book-expanded-header">
+                  <div class="book-browser-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <div class="book-browser-url">eye-cipher.security/stego-mask</div>
+                  <div class="book-badge-pill badge-cipher">SECURE CIPHER</div>
+                </div>
+
+                <div class="book-project-media">
+                  <img src="/assets/projects/eye-module.png" alt="Eye Module: Lossless Steganography & Cipher Suite" class="book-project-img" loading="lazy" />
+                  <div class="book-media-shine"></div>
+                </div>
+
+                <div class="book-project-info">
+                  <div class="book-meta-top">
+                    <span class="book-category">Cybersecurity & Cryptography</span>
+                    <span class="book-metric-tag">0.00% Degradation</span>
+                  </div>
+                  <h4 class="book-project-heading">Eye Module: Lossless Steganography & Cipher Suite</h4>
+                  <p class="book-project-summary">Dual-layer cryptographic cipher suite and pixel-level LSB steganography tool that conceals secret encrypted payloads inside images with 0.00% perceptual distortion and instant extraction.</p>
+                  
+                  <div class="book-tags-row">
+                    <span class="book-tag">Cybersecurity</span> <span class="book-tag">LSB Steganography</span> <span class="book-tag">Cipher Masking</span> <span class="book-tag">Pixel Bitplane Math</span>
+                  </div>
+
+                  <div class="book-action-row">
+                    <button type="button" class="btn-primary book-action-btn" data-project="eye-module" data-cursor="hover">
+                      <span>View Case Study</span>
+                      <span class="btn-arrow-circle">↗</span>
+                    </button>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="book-repo-btn" data-cursor="hover">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                      <span>Repository</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <!-- Luxury Walnut & Brushed Brass Shelf Ledge -->
+            <div class="bookshelf-ledge">
+              <div class="shelf-surface"></div>
+              <div class="shelf-brass-lip"></div>
+              <div class="shelf-shadow"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Interactive Hint & Counter -->
+          <div class="bookshelf-hint-bar">
+            <span class="hint-icon">✦</span>
+            <span>Hover or click any hardcover book spine to open &amp; reveal full project architecture</span>
+            <span class="hint-dot"></span>
+            <span class="hint-count">4 Flagship Volumes</span>
+          </div>
+        </div>
+
+        <!-- View 2: Responsive 2x2 Grid View -->
+        <div class="projects-grid" id="project-grid-view" style="display: none;">
+          <!-- Project 1: Balconize -->
+          <article
+            class="project-card card-left"
+            data-category="systems"
+            data-tilt
+            data-project="balconize"
+            data-cursor="view"
+          >
+            <div class="project-media-wrap">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">balconize.app</div>
+                <div class="browser-action">
+                  <span class="live-dot dot-green"></span> HACKATHON WINNER
+                </div>
+              </div>
+              <div class="project-img-inner">
+                <img
+                  src="/assets/projects/balconize.png"
+                  alt="Balconize: Urban Micro-Space Sunlight & Yield Optimizer"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-hover-pill">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-info-top">
+                <h3 class="project-title">Balconize: Micro-Space Solar &amp; Yield Engine</h3>
+                <span class="project-client">Touch Grass Pro Hackathon</span>
+              </div>
+              <p class="project-desc">Transforms apartment balcony specs and solar vectors into an exact 3-tier vertical micro-farm blueprint with 0ms local latency.</p>
+              <div class="project-tags">
+                <span class="pill-badge pill-active">AgroTech Engine</span>
+                <span class="pill-badge">Solar Vectors</span>
+                <span class="pill-badge">Micro-Climate UI</span>
+                <span class="pill-badge">$0 Cloud Cost</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: UniHack Delivery Engine -->
+          <article
+            class="project-card card-right"
+            data-category="ai-data"
+            data-tilt
+            data-project="unihack-engine"
+            data-cursor="view"
+          >
+            <div class="project-media-wrap">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">unihack-engine.internal/pim</div>
+                <div class="browser-action">
+                  <span class="live-dot dot-blue"></span> PIPELINE
+                </div>
+              </div>
+              <div class="project-img-inner">
+                <img
+                  src="/assets/projects/unihack-engine.png"
+                  alt="UniHack Delivery Engine: Product Intelligence to XLSX / CSV"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-hover-pill">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-info-top">
+                <h3 class="project-title">UniHack Delivery Engine: Product Intelligence</h3>
+                <span class="project-client">Enterprise PIM Automation</span>
+              </div>
+              <p class="project-desc">Automated enrichment engine generating fully populated 252-column enterprise PIM delivery matrices from raw supplier inputs.</p>
+              <div class="project-tags">
+                <span class="pill-badge pill-active">Enterprise PIM</span>
+                <span class="pill-badge">252 Schema Cols</span>
+                <span class="pill-badge">Python &amp; Pandas</span>
+                <span class="pill-badge">ETL Pipeline</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: LocalVoiceIntel (Gemini Edition) -->
+          <article
+            class="project-card card-left"
+            data-category="ai-data"
+            data-tilt
+            data-project="local-voice-intel"
+            data-cursor="view"
+          >
+            <div class="project-media-wrap">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">voice-intel.gemini.ai</div>
+                <div class="browser-action">
+                  <span class="live-dot dot-purple"></span> VOICE AI
+                </div>
+              </div>
+              <div class="project-img-inner">
+                <img
+                  src="/assets/projects/local-voice-intel.png"
+                  alt="LocalVoiceIntel (Gemini Edition): Custom Smart Voice Assistant"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-hover-pill">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-info-top">
+                <h3 class="project-title">LocalVoiceIntel: Custom Smart Voice Assistant</h3>
+                <span class="project-client">Google Gemini AI Studio Edition</span>
+              </div>
+              <p class="project-desc">Document knowledge base Q&amp;A voice assistant powered by Google Gemini AI Studio, Vector DB embeddings, and real-time speech synthesis.</p>
+              <div class="project-tags">
+                <span class="pill-badge pill-active">Google Gemini AI</span>
+                <span class="pill-badge">Vector DB RAG</span>
+                <span class="pill-badge">Voice Synthesis</span>
+                <span class="pill-badge">Python</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Eye Module (Steganography & Cipher Masking) -->
+          <article
+            class="project-card card-right"
+            data-category="systems"
+            data-tilt
+            data-project="eye-module"
+            data-cursor="view"
+          >
+            <div class="project-media-wrap">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">eye-cipher.security/stego</div>
+                <div class="browser-action">
+                  <span class="live-dot dot-cyan"></span> SECURE
+                </div>
+              </div>
+              <div class="project-img-inner">
+                <img
+                  src="/assets/projects/eye-module.png"
+                  alt="Eye Module: Digital Steganography & Cipher Masking"
+                  class="project-img"
+                  loading="lazy"
+                />
+                <div class="project-hover-pill">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-info-top">
+                <h3 class="project-title">Eye Module: Steganography &amp; Cipher Suite</h3>
+                <span class="project-client">Cybersecurity &amp; Cryptography</span>
+              </div>
+              <p class="project-desc">Dual-layer cryptographic cipher suite and pixel-level LSB steganography tool that conceals secret encrypted payloads inside images with 0 perceptual distortion.</p>
+              <div class="project-tags">
+                <span class="pill-badge pill-active">Cybersecurity</span>
+                <span class="pill-badge">LSB Steganography</span>
+                <span class="pill-badge">Cipher Masking</span>
+                <span class="pill-badge">Pixel Bitplane Math</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Bottom Quote & Contact CTA Trigger -->
+        <div class="projects-footer-quote">
+          <p class="quote-text">I strive to pay attention to the smallest architectural and user experience details.</p>
+          <a href="#contact" class="btn-primary quote-cta" data-cursor="hover">
+            <span>Work With Me</span>
+            <span class="btn-arrow-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Services & Contact Section: Interactive Communication Deck -->
+      <section class="contact-section" id="contact">
+        <!-- Atmospheric Vision Showcase Frame (Cinematic Editorial Transition) -->
+        <div class="vision-contact-stage" id="vision-contact-stage">
+          
+          <!-- Background Image Layers with Cross-Fade & Kinetic Depth Zoom -->
+          <div class="vision-bg-container" aria-hidden="true">
+            <div class="vision-bg-slide active" style="background-image: url('/assets/contact/slide1.jpg');" data-index="0"></div>
+            <div class="vision-bg-slide" style="background-image: url('/assets/contact/slide2.jpg');" data-index="1"></div>
+            <div class="vision-bg-slide" style="background-image: url('/assets/contact/slide3.jpg');" data-index="2"></div>
+            <div class="vision-bg-vignette"></div>
+            <div class="vision-bg-grain"></div>
+          </div>
+
+          <!-- Top Frame Navigation & Brand Bar (Matches Video Header) -->
+          <div class="vision-frame-header">
+            <div class="vision-brand-block">
+              <span class="vision-brand-initial"><span class="brand-orange">A</span>shish</span>
+              <span class="vision-brand-tagline">Enhance Your Tech Vision With Full-Stack &amp; AI Engineering</span>
+            </div>
+
+            <nav class="vision-tab-nav" aria-label="Contact Slide Navigation">
+              <button type="button" class="vision-tab active" data-slide="0" data-cursor="hover">
+                <span class="tab-label">PROJECT</span>
+                <span class="tab-indicator"></span>
+              </button>
+              <button type="button" class="vision-tab" data-slide="1" data-cursor="hover">
+                <span class="tab-label">CAREERS</span>
+                <span class="tab-indicator"></span>
+              </button>
+              <button type="button" class="vision-tab" data-slide="2" data-cursor="hover">
+                <span class="tab-label">MEETING</span>
+                <span class="tab-indicator"></span>
+              </button>
+            </nav>
+          </div>
+
+          <!-- Center Stage: Giant Kinetic Zoom Typography & Editorial Content -->
+          <div class="vision-content-stage">
+            
+            <!-- Slide 0: Project Collaboration -->
+            <div class="vision-slide-pane active" data-index="0">
+              <div class="vision-pane-inner">
+                <span class="vision-eyebrow">CREATIVE VISION.</span>
+                <div class="vision-headline-wrap">
+                  <h2 class="vision-headline">
+                    THE ART<br>OF CODE <span class="vision-accent-tag">Inquiry</span>
+                  </h2>
+                </div>
+                <p class="vision-sub-caption">
+                  A full-service software engineering &amp; enterprise AI studio space. Transforming ambitious visions into resilient architecture.
+                </p>
+                <div class="vision-actions-row">
+                  <a href="mailto:pandeyashish0329@gmail.com?subject=Inquiry:%20Project%20Collaboration" class="btn-primary vision-cta-btn" data-cursor="hover">
+                    <span>Send Transmission</span>
+                    <span class="cta-arrow">↗</span>
+                  </a>
+                  <button type="button" class="vision-copy-btn copy-email-btn" data-email="pandeyashish0329@gmail.com" data-cursor="hover">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span class="copy-btn-text">Copy Email</span>
+                    <span class="copy-email-pill">pandeyashish0329@gmail.com</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 1: Full-Time / Careers -->
+            <div class="vision-slide-pane" data-index="1">
+              <div class="vision-pane-inner">
+                <span class="vision-eyebrow">ENGINEERING EXCELLENCE.</span>
+                <div class="vision-headline-wrap">
+                  <h2 class="vision-headline">
+                    THE ARCH<br>OF TECH <span class="vision-accent-tag">Full-Time</span>
+                  </h2>
+                </div>
+                <p class="vision-sub-caption">
+                  Full-Stack Software Engineer, AI/ML Specialist, and Technical Architect ready to build high-stakes products.
+                </p>
+                <div class="vision-actions-row">
+                  <a href="mailto:pandeyashish0329@gmail.com?subject=Career%20Opportunity:%20Full-Time%20Role" class="btn-primary vision-cta-btn" data-cursor="hover">
+                    <span>Discuss Role</span>
+                    <span class="cta-arrow">↗</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/ashish-ranjan-pandey-785924328" target="_blank" rel="noopener" class="vision-ghost-btn" data-cursor="hover">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <span>LinkedIn Profile</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Direct Sync & Advisory -->
+            <div class="vision-slide-pane" data-index="2">
+              <div class="vision-pane-inner">
+                <span class="vision-eyebrow">DIRECT ALIGNMENT.</span>
+                <div class="vision-headline-wrap">
+                  <h2 class="vision-headline">
+                    A SYNC IN<br>REALTIME <span class="vision-accent-tag">15-Min</span>
+                  </h2>
+                </div>
+                <p class="vision-sub-caption">
+                  15-minute quick technical intro, hackathon advisory, tech community mentorship, or open-source sync.
+                </p>
+                <div class="vision-actions-row">
+                  <a href="mailto:pandeyashish0329@gmail.com?subject=Schedule%2015-Min%20Sync" class="btn-primary vision-cta-btn" data-cursor="hover">
+                    <span>Schedule 15-Min Intro</span>
+                    <span class="cta-arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/AshishRanjanPandey" target="_blank" rel="noopener" class="vision-ghost-btn" data-cursor="hover">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                    </svg>
+                    <span>GitHub Feed</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Frame Footer: Studio Metadata & Signature Circular Advance Button -->
+          <div class="vision-frame-footer">
+            <div class="vision-footer-info">
+              <span class="info-line-title">FULL-SERVICE SOFTWARE &amp; AI ENGINEERING</span>
+              <span class="info-line-sub">AVAILABLE WORLDWIDE • 23.25° N, 77.41° E • IST (<span id="contact-live-clock">--:--:-- IST</span>)</span>
+            </div>
+
+            <!-- Signature Circular Orange Button from the Video -->
+            <button type="button" class="vision-advance-btn" id="vision-advance-btn" aria-label="Next Slide" data-cursor="hover">
+              <svg class="progress-ring" width="58" height="58" viewBox="0 0 58 58">
+                <circle class="progress-ring-bg" cx="29" cy="29" r="25" />
+                <circle class="progress-ring-circle" id="vision-progress-circle" cx="29" cy="29" r="25" />
+              </svg>
+              <div class="advance-btn-inner">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" class="advance-arrow-icon">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+        </div>
+</section>
+
+      <!-- Comprehensive New Footer Component -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="footer-logo" data-cursor="hover">ASHISH.DEV</a>
+            <p class="footer-tagline">
+              Designing and engineering high-impact digital experiences that turn visitors into loyal clients.
+            </p>
+            <div class="footer-status">
+              <span class="status-pulse"></span>
+              <span>Available for freelance & full-time roles worldwide</span>
+            </div>
+          </div>
+
+          <div class="footer-links-group">
+            <div class="footer-col">
+              <span class="footer-col-title">Navigation</span>
+              <ul class="footer-nav">
+                <li><a href="#hero" data-cursor="hover">Home</a></li>
+                <li><a href="#about" data-cursor="hover">About</a></li>
+                <li><a href="#skills" data-cursor="hover">Skills</a></li>
+                <li><a href="#projects" data-cursor="hover">Project</a></li>
+                <li><a href="#contact" data-cursor="hover">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <span class="footer-col-title">Connect</span>
+              <ul class="footer-nav">
+                <li><a href="https://github.com/AshishRanjanPandey" target="_blank" rel="noopener" data-cursor="hover">GitHub ↗</a></li>
+                <li><a href="https://www.linkedin.com/in/ashish-ranjan-pandey-785924328" target="_blank" rel="noopener" data-cursor="hover">LinkedIn ↗</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener" data-cursor="hover">X / Twitter ↗</a></li>
+                <li><a href="https://dribbble.com" target="_blank" rel="noopener" data-cursor="hover">Dribbble ↗</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <span class="footer-col-title">Local Time</span>
+              <p class="footer-location">India • Remote Worldwide</p>
+              <p class="footer-time" id="footer-live-time">UTC+5:30 • IST</p>
+              <p class="footer-response">⚡ Replies within 2 hours</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copy">
+            © <span id="current-year">2026</span> Ashish Ranjan Pandey. All rights reserved.
+          </div>
+          <div class="footer-tech">
+            Engineered with 60–120 FPS Canvas Scroll Physics
+          </div>
+          <button class="footer-back-to-top" id="back-to-top-btn" data-cursor="hover">
+            <span>Back to top</span>
+            <span class="arrow-up">↑</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Interactive Certificate Modal / Lightbox -->
+    <div id="certificate-modal" class="cert-modal" aria-hidden="true">
+      <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
+      <div class="cert-modal-dialog">
+        <button class="cert-modal-close-btn" id="cert-modal-close" aria-label="Close Certificate Preview" data-cursor="hover">&times;</button>
+        <div class="cert-modal-body">
+          <div class="cert-modal-preview">
+            <img id="cert-modal-img" src="" alt="Verified Certificate Preview" />
+          </div>
+          <div class="cert-modal-sidebar">
+            <div class="cert-modal-top">
+              <div class="cert-modal-badge-row">
+                <span class="status-pulse-dot dot-gold"></span>
+                <span id="cert-modal-badge" class="cert-modal-badge-text">Verified Credential</span>
+              </div>
+              <h2 id="cert-modal-title" class="cert-modal-title">Certificate Title</h2>
+              <p id="cert-modal-issuer" class="cert-modal-issuer">Issuing Organization</p>
+            </div>
+
+            <div class="cert-modal-info-card">
+              <div class="cert-modal-meta-row">
+                <span class="cert-modal-meta-label">Credential Verification:</span>
+                <code id="cert-modal-id" class="cert-modal-id-text">ID: NPTEL26MG33S952401760</code>
+              </div>
+              <div class="cert-modal-status-stamp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Authenticated Credential</span>
+              </div>
+            </div>
+
+            <div class="cert-modal-actions">
+              <a id="cert-modal-open-btn" href="#" target="_blank" rel="noopener" class="btn-primary cert-modal-btn" data-cursor="hover">
+                <span>Open Full Resolution</span>
+                <span class="btn-arrow-circle">&nearr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Project Modal / Drawer -->
+    <div id="project-modal" class="project-modal" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-dialog">
+        <button class="modal-close-btn" aria-label="Close" data-cursor="hover">✕</button>
+        <div class="modal-content">
+          <div class="modal-image-col">
+            <img id="modal-img" src="" alt="Project Preview" />
+          </div>
+          <div class="modal-info-col">
+            <div class="tag-pill">
+              <span class="tag-dot"></span>
+              <span id="modal-category">Featured Project</span>
+            </div>
+            <h2 id="modal-title" class="modal-title">Project Title</h2>
+            <p id="modal-client" class="modal-client">Client: Company Name</p>
+            <p id="modal-desc" class="modal-desc">Detailed case study description.</p>
+            
+            <div class="modal-stats">
+              <div class="modal-stat-item">
+                <span class="modal-stat-val">+142%</span>
+                <span class="modal-stat-label">Conversion Rate</span>
+              </div>
+              <div class="modal-stat-item">
+                <span class="modal-stat-val">0.6s</span>
+                <span class="modal-stat-label">Load Time</span>
+              </div>
+              <div class="modal-stat-item">
+                <span class="modal-stat-val">100</span>
+                <span class="modal-stat-label">PageSpeed Score</span>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn-primary" data-cursor="hover">
+                <span>Visit Live Website</span>
+                <span class="btn-arrow-circle">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimalist floating loader bar -->
+    <div id="loader" class="loader">
+      <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <div class="loader-text"><span id="loader-percent">0</span>%</div>
+      </div>
+      <div class="loader-progress-track">
+        <div id="loader-bar" class="loader-progress-bar"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
